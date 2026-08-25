@@ -65,4 +65,5 @@ Information about exact oral examination times and any further instructions will
 - [lectures/](lectures) - lecture material
 - [exercises/](exercises) - exercise sheets and available solutions
 - [exams/](exams) - previous examinations and available solutions
+- [summary/](summary) - self-authored concise course summaries and LaTeX sources
 - [misc/](misc) - supplementary course material
