@@ -1,17 +1,11 @@
-# MATP33
+# MATP33 — Group and Ring Theory
 
-## What to return to
+Current course background, examination details, and important dates will be added from the official 2026 course material.
 
-### Lecture 0
+## Repository contents
 
-- [ ] Fundamental Theorem of Finite Abelian Groups
-- [ ] Proof: First Isomorphism Theorem
-- [ ] Proof: Second Isomorphism Theorem
-- [ ] Proof: Third Isomorphism Theorem
-
-### Lecture 1
-
-Group Actions -> Permutations -> Orbits/Stabliziers -> Conjugacy thorugh group acting on itself.
-
-- [ ] Proof of Orbit-Stabilizer Theorem
-- [ ] Exercise 1.5
+- [PLAN.md](PLAN.md) — official weekly course plan and material to return to
+- [Lectures/](Lectures) — lecture material
+- [Exercises/](Exercises) — exercise sheets and available solutions
+- [Exams/](Exams) — previous examinations and available solutions
+- [misc/](misc) — supplementary course material
