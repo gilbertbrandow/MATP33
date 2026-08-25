@@ -50,7 +50,7 @@ Information and instructions for the oral examinations will be posted on Canvas.
 ## Repository contents
 
 - [PLAN.md](PLAN.md) - official weekly course plan and material to return to
-- [Lectures/](Lectures) - lecture material
-- [Exercises/](Exercises) - exercise sheets and available solutions
-- [Exams/](Exams) - previous examinations and available solutions
+- [lectures/](lectures) - lecture material
+- [exercises/](exercises) - exercise sheets and available solutions
+- [exams/](exams) - previous examinations and available solutions
 - [misc/](misc) - supplementary course material
