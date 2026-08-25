@@ -61,7 +61,7 @@ Information about exact oral examination times and any further instructions will
 
 ## Repository contents
 
-- [PLAN.md](PLAN.md) - official weekly course plan and material to return to
+- [PLAN.md](PLAN.md) - official weekly course plan and review list
 - [lectures/](lectures) - lecture material
 - [exercises/](exercises) - exercise sheets and available solutions
 - [exams/](exams) - previous examinations and available solutions
