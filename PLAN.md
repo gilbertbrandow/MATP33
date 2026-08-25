@@ -1,13 +1,89 @@
 # Course plan
 
-The current weekly course plan will be added from the official 2026 course material.
+Sources:
+
+- [Detailed course programme](misc/Programme-1.pdf)
+- [TimeEdit schedule](https://cloud.timeedit.net/lu/web/n1/ri17c15ZX65ZZQQ6276857w0yQ0Q5Yp7Y63g33YQ434.html)
+
+The weekly sections below reproduce the official course programme. References to the optional textbook are included where the programme supplies them.
+
+## Week 36 (31 August-6 September 2026)
+
+- [ ] Lecture: [Group actions](Lectures/Lecture%201.pdf) (3 September; optional reading: [B], Sections 5.4-5.4.9)
+- [ ] Exercises: [Exercise Sheet 1](Exercises/Exercise%201.pdf)
+- [ ] Lecture: [Applications of the Orbit-Stabiliser Theorem](Lectures/Lecture%202.pdf) (4 September; optional reading: [B], Sections 5.4.10-5.4.13)
+- [ ] Exercises: [Exercise Sheet 2](Exercises/Exercise%202.pdf)
+
+## Week 37 (7-13 September 2026)
+
+- [ ] Lecture: [Sylow theorems](Lectures/Lecture%203.pdf) (7 September; optional reading: [B], Sections 8.4-8.4.6)
+- [ ] Exercises: [Exercise Sheet 3](Exercises/Exercise%203.pdf)
+- [ ] Lecture: [Applications of Sylow theorems](Lectures/Lecture%204.pdf) (10 September; optional reading: [B], Sections 8.4.7-8.5)
+- [ ] Exercises: [Exercise Sheet 4](Exercises/Exercise%204.pdf)
+- [ ] Seminar: Discuss [Exercise Sheet 1](Exercises/Exercise%201.pdf) and [Exercise Sheet 2](Exercises/Exercise%202.pdf) (11 September)
+
+## Week 38 (14-20 September 2026)
+
+- [ ] Lecture: [An introduction to modules](Lectures/Lecture%205.pdf) (14 September; optional reading: [B], Sections 14.1-14.3)
+- [ ] Exercises: [Exercise Sheet 5](Exercises/Exercise%205.pdf)
+- [ ] Lecture: [Completely reducible modules](Lectures/Lecture%206.pdf) (17 September; optional reading: [B], Section 14.4)
+- [ ] Exercises: [Exercise Sheet 6](Exercises/Exercise%206.pdf)
+- [ ] Seminar: Discuss [Exercise Sheet 3](Exercises/Exercise%203.pdf) and [Exercise Sheet 4](Exercises/Exercise%204.pdf) (18 September)
+
+## Week 39 (21-27 September 2026)
+
+- [ ] Lecture: [Free modules](Lectures/Lecture%207.pdf) (21 September; optional reading: [B], Section 14.5)
+- [ ] Exercises: [Exercise Sheet 7](Exercises/Exercise%207.pdf)
+- [ ] Lecture: [Noetherian and Artinian modules](Lectures/Lecture%208.pdf) (24 September; optional reading: [B], Sections 19.1-19.2.4)
+- [ ] Exercises: [Exercise Sheet 8](Exercises/Exercise%208.pdf)
+- [ ] Seminar: Discuss [Exercise Sheet 5](Exercises/Exercise%205.pdf) and [Exercise Sheet 6](Exercises/Exercise%206.pdf) (25 September)
+
+## Week 40 (28 September-4 October 2026)
+
+- [ ] Lecture: [Noetherian and Artinian rings](Lectures/Lecture%209.pdf) (28 September; optional reading: [B], Sections 19.2.5-19.2.12)
+- [ ] Exercises: [Exercise Sheet 9](Exercises/Exercise%209.pdf)
+- [ ] Lecture: [Hilbert basis theorem](Lectures/Lecture%2010.pdf) (1 October; optional reading: [B], Sections 19.2.14-19.2.15)
+- [ ] Exercises: [Exercise Sheet 10](Exercises/Exercise%2010.pdf)
+- [ ] Seminar: Discuss [Exercise Sheet 7](Exercises/Exercise%207.pdf) and [Exercise Sheet 8](Exercises/Exercise%208.pdf) (2 October)
+
+## Week 41 (5-11 October 2026)
+
+- [ ] Lecture: [Wedderburn-Artin Theorem](Lectures/Lecture%2011.pdf) (5 October; optional reading: [B], Sections 19.3-19.3.6)
+- [ ] Exercises: [Exercise Sheet 11](Exercises/Exercise%2011.pdf)
+- [ ] Lecture: [Smith normal form over a PID](Lectures/Lecture%2012.pdf) (8 October; optional reading: [B], Chapter 20)
+- [ ] Exercises: [Exercise Sheet 12](Exercises/Exercise%2012.pdf)
+- [ ] Seminar: Discuss [Exercise Sheet 9](Exercises/Exercise%209.pdf) and [Exercise Sheet 10](Exercises/Exercise%2010.pdf) (9 October)
+
+## Week 42 (12-18 October 2026)
+
+- [ ] Lecture: [Finitely generated modules over a PID](Lectures/Lecture%2013.pdf) (12 October; optional reading: [B], Sections 21.1-21.3)
+- [ ] Exercises: [Exercise Sheet 13](Exercises/Exercise%2013.pdf)
+- [ ] Lecture: [Rational canonical form and tensor products](Lectures/Lecture%2014.pdf) (15 October; optional reading: [B], Sections 21.4 and 22.2)
+- [ ] Exercises: [Exercise Sheet 14](Exercises/Exercise%2014.pdf)
+- [ ] Seminar: Discuss [Exercise Sheet 11](Exercises/Exercise%2011.pdf) and [Exercise Sheet 12](Exercises/Exercise%2012.pdf) (16 October)
+
+## Week 43 (19-25 October 2026)
+
+- [ ] Lecture: [Module structure of the tensor product](Lectures/Lecture%2015.pdf) (19 October; optional reading: [B], Sections 22.3-22.4)
+- [ ] Exercises: [Exercise Sheet 15](Exercises/Exercise%2015.pdf)
+- [ ] Seminar: Discuss [Exercise Sheet 13](Exercises/Exercise%2013.pdf), [Exercise Sheet 14](Exercises/Exercise%2014.pdf), and [Exercise Sheet 15](Exercises/Exercise%2015.pdf) (22 October)
+- [ ] Seminar: Revision session 1 - discuss the [August 2023 written exam](Exams/MATP33-2023-08-15.pdf) and [November 2024 written exam](Exams/GRT_ResitExam_2024-11-30.pdf) (23 October)
+
+## Week 44 (26 October-1 November 2026)
+
+- [ ] Seminar: Revision session 2 - discuss the [August 2025 written exam](Exams/GRT_ResitExam_2025-08-25.pdf) and [November 2025 written exam](Exams/GRT_ResitExam_2025-11-29.pdf) (26 October)
+- [ ] Examination: Written examination (27 October, 08:00-13:00)
+
+## Week 45 (2-8 November 2026)
+
+- [ ] Examination: Oral examination (afternoon, exact time to be announced on Canvas)
 
 # What to return to
 
-- [ ] Theorem: Fundamental Theorem of Finite Abelian Groups (Lecture 0)
-- [ ] Proof: First Isomorphism Theorem (Lecture 0)
-- [ ] Proof: Second Isomorphism Theorem (Lecture 0)
-- [ ] Proof: Third Isomorphism Theorem (Lecture 0)
-- [ ] Concept: Group actions, permutations, orbits, stabilizers, and conjugacy through the action of a group on itself (Lecture 1)
-- [ ] Proof: Orbit–Stabilizer Theorem (Lecture 1)
-- [ ] Exercise: Exercise 1.5 (Exercise 1)
+- [ ] Theorem: Fundamental Theorem of Finite Abelian Groups ([Lecture 0](Lectures/Lecture%200.pdf))
+- [ ] Proof: First Isomorphism Theorem ([Lecture 0](Lectures/Lecture%200.pdf))
+- [ ] Proof: Second Isomorphism Theorem ([Lecture 0](Lectures/Lecture%200.pdf))
+- [ ] Proof: Third Isomorphism Theorem ([Lecture 0](Lectures/Lecture%200.pdf))
+- [ ] Concept: Group actions, permutations, orbits, stabilizers, and conjugacy through the action of a group on itself ([Lecture 1](Lectures/Lecture%201.pdf))
+- [ ] Proof: Orbit-Stabiliser Theorem ([Lecture 1](Lectures/Lecture%201.pdf))
+- [ ] Exercise: [Exercise 1.5](Exercises/Exercise%201.pdf)
