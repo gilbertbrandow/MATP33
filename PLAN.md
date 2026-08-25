@@ -78,7 +78,7 @@ The weekly sections below reproduce the official course programme. References to
 
 - [ ] Examination: Oral examination (afternoon, exact time to be announced on Canvas)
 
-# What to return to
+# To Review
 
 - [ ] Theorem: Fundamental Theorem of Finite Abelian Groups ([Lecture 0](lectures/Lecture%200.pdf))
 - [ ] Proof: First Isomorphism Theorem ([Lecture 0](lectures/Lecture%200.pdf))
