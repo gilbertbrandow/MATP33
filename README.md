@@ -29,7 +29,19 @@ The examination consists of:
 - An oral examination worth 2.5 credits
 - The oral examination may only be taken after passing the written examination
 
-Information and instructions for the oral examinations will be posted on Canvas. The available material does not specify the grading scale, permitted aids, or any mandatory participation requirements.
+### Oral examination
+
+- The examination lasts approximately 45 minutes.
+- You will be asked around four questions from different parts of the course.
+- Each question is worth 2.5 marks, giving a total of 10 marks.
+- You may request a different question, but 0.5 marks will be deducted each time.
+- The examinable material consists essentially of all definitions, results, and examinable proofs from the course.
+- Questions will usually concern significant results whose proofs do not depend on too many other course results.
+- You should explain your answers orally while writing the essential points on the blackboard. You should not spend most of the examination writing without speaking.
+
+Preparation for the oral examination is not a separate task from preparation for the written examination. A strong grasp of the theory, including proofs, is also required for the written examination, so relying mainly on past examination papers is not sufficient. The priority is to understand all definitions, statements of results, and proofs; learning and remembering them should follow from that understanding.
+
+Information about exact oral examination times and any further instructions will be posted on Canvas. The available material does not specify the grading scale, permitted aids for the written examination, or any mandatory participation requirements.
 
 ## Important dates
 
