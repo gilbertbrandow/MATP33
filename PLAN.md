@@ -9,22 +9,22 @@ The weekly sections below reproduce the official course programme. References to
 
 ## Week 36 (31 August-6 September 2026)
 
-- [ ] Lecture: [Group actions](lectures/Lecture%201.pdf) (3 September; optional reading: [B], Sections 5.4-5.4.9)
-- [ ] Exercises: [Exercise Sheet 1](exercises/Exercise%201.pdf)
-- [ ] Lecture: [Applications of the Orbit-Stabiliser Theorem](lectures/Lecture%202.pdf) (4 September; optional reading: [B], Sections 5.4.10-5.4.13)
-- [ ] Exercises: [Exercise Sheet 2](exercises/Exercise%202.pdf)
+- [x] Lecture: [Group actions](lectures/Lecture%201.pdf) (3 September; optional reading: [B], Sections 5.4-5.4.9)
+- [x] Exercises: [Exercise Sheet 1](exercises/Exercise%201.pdf)
+- [x] Lecture: [Applications of the Orbit-Stabiliser Theorem](lectures/Lecture%202.pdf) (4 September; optional reading: [B], Sections 5.4.10-5.4.13)
+- [x] Exercises: [Exercise Sheet 2](exercises/Exercise%202.pdf)
 
 ## Week 37 (7-13 September 2026)
 
-- [ ] Lecture: [Sylow theorems](lectures/Lecture%203.pdf) (7 September; optional reading: [B], Sections 8.4-8.4.6)
-- [ ] Exercises: [Exercise Sheet 3](exercises/Exercise%203.pdf)
-- [ ] Lecture: [Applications of Sylow theorems](lectures/Lecture%204.pdf) (10 September; optional reading: [B], Sections 8.4.7-8.5)
-- [ ] Exercises: [Exercise Sheet 4](exercises/Exercise%204.pdf)
+- [x] Lecture: [Sylow theorems](lectures/Lecture%203.pdf) (7 September; optional reading: [B], Sections 8.4-8.4.6)
+- [x] Exercises: [Exercise Sheet 3](exercises/Exercise%203.pdf)
+- [x] Lecture: [Applications of Sylow theorems](lectures/Lecture%204.pdf) (10 September; optional reading: [B], Sections 8.4.7-8.5)
+- [x] Exercises: [Exercise Sheet 4](exercises/Exercise%204.pdf)
 - [ ] Seminar: Discuss [Exercise Sheet 1](exercises/Exercise%201.pdf) and [Exercise Sheet 2](exercises/Exercise%202.pdf) (11 September)
 
 ## Week 38 (14-20 September 2026)
 
-- [ ] Lecture: [An introduction to modules](lectures/Lecture%205.pdf) (14 September; optional reading: [B], Sections 14.1-14.3)
+- [x] Lecture: [An introduction to modules](lectures/Lecture%205.pdf) (14 September; optional reading: [B], Sections 14.1-14.3)
 - [ ] Exercises: [Exercise Sheet 5](exercises/Exercise%205.pdf)
 - [ ] Lecture: [Completely reducible modules](lectures/Lecture%206.pdf) (17 September; optional reading: [B], Section 14.4)
 - [ ] Exercises: [Exercise Sheet 6](exercises/Exercise%206.pdf)
@@ -76,14 +76,15 @@ The weekly sections below reproduce the official course programme. References to
 
 ## Week 45 (2-8 November 2026)
 
-- [ ] Examination: Oral examination (afternoon, exact time to be announced on Canvas)
+- [ ] Examination: Oral examination
 
-# To Review
+## To Review
 
 - [ ] Theorem: Fundamental Theorem of Finite Abelian Groups ([Lecture 0](lectures/Lecture%200.pdf))
 - [ ] Proof: First Isomorphism Theorem ([Lecture 0](lectures/Lecture%200.pdf))
 - [ ] Proof: Second Isomorphism Theorem ([Lecture 0](lectures/Lecture%200.pdf))
 - [ ] Proof: Third Isomorphism Theorem ([Lecture 0](lectures/Lecture%200.pdf))
-- [ ] Concept: Group actions, permutations, orbits, stabilizers, and conjugacy through the action of a group on itself ([Lecture 1](lectures/Lecture%201.pdf))
 - [ ] Proof: Orbit-Stabiliser Theorem ([Lecture 1](lectures/Lecture%201.pdf))
 - [ ] Exercise: [Exercise 1.5](exercises/Exercise%201.pdf)
+- [ ] Proof of Sylows Theorems
+- [ ] Exercise 4.2
