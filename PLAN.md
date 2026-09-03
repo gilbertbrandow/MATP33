@@ -20,15 +20,13 @@ The weekly sections below reproduce the official course programme. References to
 - [x] Exercises: [Exercise Sheet 3](exercises/Exercise%203.pdf)
 - [x] Lecture: [Applications of Sylow theorems](lectures/Lecture%204.pdf) (10 September; optional reading: [B], Sections 8.4.7-8.5)
 - [x] Exercises: [Exercise Sheet 4](exercises/Exercise%204.pdf)
-- [ ] Seminar: Discuss [Exercise Sheet 1](exercises/Exercise%201.pdf) and [Exercise Sheet 2](exercises/Exercise%202.pdf) (11 September)
 
 ## Week 38 (14-20 September 2026)
 
 - [x] Lecture: [An introduction to modules](lectures/Lecture%205.pdf) (14 September; optional reading: [B], Sections 14.1-14.3)
-- [ ] Exercises: [Exercise Sheet 5](exercises/Exercise%205.pdf)
+- [x] Exercises: [Exercise Sheet 5](exercises/Exercise%205.pdf)
 - [ ] Lecture: [Completely reducible modules](lectures/Lecture%206.pdf) (17 September; optional reading: [B], Section 14.4)
 - [ ] Exercises: [Exercise Sheet 6](exercises/Exercise%206.pdf)
-- [ ] Seminar: Discuss [Exercise Sheet 3](exercises/Exercise%203.pdf) and [Exercise Sheet 4](exercises/Exercise%204.pdf) (18 September)
 
 ## Week 39 (21-27 September 2026)
 
@@ -36,7 +34,6 @@ The weekly sections below reproduce the official course programme. References to
 - [ ] Exercises: [Exercise Sheet 7](exercises/Exercise%207.pdf)
 - [ ] Lecture: [Noetherian and Artinian modules](lectures/Lecture%208.pdf) (24 September; optional reading: [B], Sections 19.1-19.2.4)
 - [ ] Exercises: [Exercise Sheet 8](exercises/Exercise%208.pdf)
-- [ ] Seminar: Discuss [Exercise Sheet 5](exercises/Exercise%205.pdf) and [Exercise Sheet 6](exercises/Exercise%206.pdf) (25 September)
 
 ## Week 40 (28 September-4 October 2026)
 
