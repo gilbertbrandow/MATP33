@@ -25,8 +25,8 @@ The weekly sections below reproduce the official course programme. References to
 
 - [x] Lecture: [An introduction to modules](lectures/Lecture%205.pdf) (14 September; optional reading: [B], Sections 14.1-14.3)
 - [x] Exercises: [Exercise Sheet 5](exercises/Exercise%205.pdf)
-- [ ] Lecture: [Completely reducible modules](lectures/Lecture%206.pdf) (17 September; optional reading: [B], Section 14.4)
-- [ ] Exercises: [Exercise Sheet 6](exercises/Exercise%206.pdf)
+- [x] Lecture: [Completely reducible modules](lectures/Lecture%206.pdf) (17 September; optional reading: [B], Section 14.4)
+- [x] Exercises: [Exercise Sheet 6](exercises/Exercise%206.pdf)
 
 ## Week 39 (21-27 September 2026)
 
@@ -85,3 +85,7 @@ The weekly sections below reproduce the official course programme. References to
 - [ ] Exercise: [Exercise 1.5](exercises/Exercise%201.pdf)
 - [ ] Proof of Sylows Theorems
 - [ ] Exercise 4.2
+- [ ] Proof Schurs Lemma Theorem 5.6
+- [ ] Proof Theorem 5.9
+- [ ] Exercise 6.2
+- [ ] Exercise 6.5
