@@ -30,10 +30,10 @@ The weekly sections below reproduce the official course programme. References to
 
 ## Week 39 (21-27 September 2026)
 
-- [ ] Lecture: [Free modules](lectures/Lecture%207.pdf) (21 September; optional reading: [B], Section 14.5)
-- [ ] Exercises: [Exercise Sheet 7](exercises/Exercise%207.pdf)
-- [ ] Lecture: [Noetherian and Artinian modules](lectures/Lecture%208.pdf) (24 September; optional reading: [B], Sections 19.1-19.2.4)
-- [ ] Exercises: [Exercise Sheet 8](exercises/Exercise%208.pdf)
+- [x] Lecture: [Free modules](lectures/Lecture%207.pdf) (21 September; optional reading: [B], Section 14.5)
+- [x] Exercises: [Exercise Sheet 7](exercises/Exercise%207.pdf)
+- [x] Lecture: [Noetherian and Artinian modules](lectures/Lecture%208.pdf) (24 September; optional reading: [B], Sections 19.1-19.2.4)
+- [x] Exercises: [Exercise Sheet 8](exercises/Exercise%208.pdf)
 
 ## Week 40 (28 September-4 October 2026)
 
@@ -41,7 +41,6 @@ The weekly sections below reproduce the official course programme. References to
 - [ ] Exercises: [Exercise Sheet 9](exercises/Exercise%209.pdf)
 - [ ] Lecture: [Hilbert basis theorem](lectures/Lecture%2010.pdf) (1 October; optional reading: [B], Sections 19.2.14-19.2.15)
 - [ ] Exercises: [Exercise Sheet 10](exercises/Exercise%2010.pdf)
-- [ ] Seminar: Discuss [Exercise Sheet 7](exercises/Exercise%207.pdf) and [Exercise Sheet 8](exercises/Exercise%208.pdf) (2 October)
 
 ## Week 41 (5-11 October 2026)
 
@@ -49,7 +48,6 @@ The weekly sections below reproduce the official course programme. References to
 - [ ] Exercises: [Exercise Sheet 11](exercises/Exercise%2011.pdf)
 - [ ] Lecture: [Smith normal form over a PID](lectures/Lecture%2012.pdf) (8 October; optional reading: [B], Chapter 20)
 - [ ] Exercises: [Exercise Sheet 12](exercises/Exercise%2012.pdf)
-- [ ] Seminar: Discuss [Exercise Sheet 9](exercises/Exercise%209.pdf) and [Exercise Sheet 10](exercises/Exercise%2010.pdf) (9 October)
 
 ## Week 42 (12-18 October 2026)
 
@@ -57,7 +55,6 @@ The weekly sections below reproduce the official course programme. References to
 - [ ] Exercises: [Exercise Sheet 13](exercises/Exercise%2013.pdf)
 - [ ] Lecture: [Rational canonical form and tensor products](lectures/Lecture%2014.pdf) (15 October; optional reading: [B], Sections 21.4 and 22.2)
 - [ ] Exercises: [Exercise Sheet 14](exercises/Exercise%2014.pdf)
-- [ ] Seminar: Discuss [Exercise Sheet 11](exercises/Exercise%2011.pdf) and [Exercise Sheet 12](exercises/Exercise%2012.pdf) (16 October)
 
 ## Week 43 (19-25 October 2026)
 
@@ -89,3 +86,8 @@ The weekly sections below reproduce the official course programme. References to
 - [ ] Proof Theorem 5.9
 - [ ] Exercise 6.2
 - [ ] Exercise 6.5
+- [ ] Exercise 7.6 (?)
+- [ ] Proof 5.19
+- [ ] Almost all proofs Lecture 7-8
+- [ ] Exercise 8.1
+- [ ] Exercise 8.3
