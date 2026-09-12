@@ -39,8 +39,8 @@ The weekly sections below reproduce the official course programme. References to
 
 - [x] Lecture: [Noetherian and Artinian rings](lectures/Lecture%209.pdf) (28 September; optional reading: [B], Sections 19.2.5-19.2.12)
 - [x] Exercises: [Exercise Sheet 9](exercises/Exercise%209.pdf)
-- [ ] Lecture: [Hilbert basis theorem](lectures/Lecture%2010.pdf) (1 October; optional reading: [B], Sections 19.2.14-19.2.15)
-- [ ] Exercises: [Exercise Sheet 10](exercises/Exercise%2010.pdf)
+- [/] Lecture: [Hilbert basis theorem](lectures/Lecture%2010.pdf) (1 October; optional reading: [B], Sections 19.2.14-19.2.15)
+- [x] Exercises: [Exercise Sheet 10](exercises/Exercise%2010.pdf)
 
 ## Week 41 (5-11 October 2026)
 
@@ -92,4 +92,6 @@ The weekly sections below reproduce the official course programme. References to
 - [ ] Exercise 8.1
 - [ ] Exercise 8.3
 - [ ] Proof of Hilbers basis theorem (6.23)
-- [ ] Extra questions lecture 9
+- [ ] Extra questions exercises 9
+- [ ] Exercises 10.3
+- [ ] Extra questions exercises 10
