@@ -273,4 +273,33 @@ Let $S, H \in \mathrm{Syl}_p(G)$. Let $S$ act on the coset space $G/H$ by left t
 \end{proof}
 
 
+\begin{corollary}[3.10]
+A Sylow $p$-subgroup of $G$ is unique if and only if it is normal in $G$.
+\end{corollary}
+
+\begin{proof}
+If $P$ is the unique Sylow $p$-subgroup, then $gPg^{-1} = P$ for all $g \in G$ (since conjugates are also Sylow $p$-subgroups), so $P \trianglelefteq G$. Conversely, if $P \trianglelefteq G$ then $P$ is its own conjugate, so by the Second Sylow Theorem it is the only Sylow $p$-subgroup.
+\end{proof}
+
+\begin{theorem}[3.9 — Third Sylow Theorem]
+Let $G$ be a finite group and $p$ a prime. The number $n_p$ of Sylow $p$-subgroups satisfies $n_p \mid |G|$ and $n_p \equiv 1 \pmod{p}$.
+\end{theorem}
+
+\begin{proof}
+\textit{$n_p \mid |G|$.} By the Second Sylow Theorem, all Sylow $p$-subgroups are conjugate to a fixed $K \in \mathrm{Syl}_p(G)$, so $n_p = |\mathrm{ccl}(K)| = |G : N_G(K)|$, which divides $|G|$.
+
+\textit{$n_p \equiv 1 \pmod{p}$.} Let $P \in \mathrm{Syl}_p(G)$. Since conjugates of Sylow $p$-subgroups are again Sylow $p$-subgroups (by the Second Sylow Theorem), $P$ acts on the set $\mathrm{Syl}_p(G)$ by conjugation:
+\[
+  x \cdot Q := xQx^{-1}, \quad x \in P,\ Q \in \mathrm{Syl}_p(G).
+\]
+This action partitions $\mathrm{Syl}_p(G)$ into orbits. Let $F \subseteq \mathrm{Syl}_p(G)$ denote the set of fixed points (those $Q$ with $xQx^{-1} = Q$ for all $x \in P$), and let $\mathcal{O}$ denote the collection of orbits of size greater than 1. Then:
+\[
+  n_p = |\mathrm{Syl}_p(G)| = |F| + \sum_{O \in \mathcal{O}} |O|.
+\]
+By the Orbit-Stabiliser Theorem each $|O|$ divides $|P| = p^m$, so every $O \in \mathcal{O}$ has size $p^e$ for some $e \geq 1$, hence $p \mid |O|$. Therefore $n_p \equiv |F| \pmod{p}$.
+
+It remains to show $F = \{P\}$, which gives $n_p \equiv 1 \pmod{p}$. Clearly $P \in F$. If $Q \in F$, then $xQx^{-1} = Q$ for all $x \in P$, so $P \leq N_G(Q)$. By Corollary 3.10, since $Q \trianglelefteq N_G(Q)$, $Q$ is the unique Sylow $p$-subgroup of $N_G(Q)$. But $P$ is also a Sylow $p$-subgroup of $N_G(Q)$, so $P = Q$. Hence $F = \{P\}$.
+\end{proof}
+
+
 \end{document}
