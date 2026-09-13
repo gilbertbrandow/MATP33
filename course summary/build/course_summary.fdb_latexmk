@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1789314657.32864 "/Users/simongustafsson/Desktop/Bachelors in Mathematics/MATP33/course summary/course_summary.tex" "build/course_summary.pdf" "course_summary" 1789314658.10937 0
+["pdflatex"] 1789314891.21736 "/Users/simongustafsson/Desktop/Bachelors in Mathematics/MATP33/course summary/course_summary.tex" "build/course_summary.pdf" "course_summary" 1789314891.9018 0
   "/Users/simongustafsson/Desktop/Bachelors in Mathematics/MATP33/course summary/course_summary.tex" 1789314656.94069 16483 a50cd57c58222668c988b0b1a1c0757a ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -97,8 +97,8 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1725786739.30054 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1725786567 8221431 0e3ed4c0ce3a607b82f78dc061b52468 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "build/course_summary.aux" 1789314658.04161 162 f042405b684a8c860cba07045d113040 "pdflatex"
-  "build/course_summary.out" 1789314657.841 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "build/course_summary.aux" 1789314891.83896 162 f042405b684a8c860cba07045d113040 "pdflatex"
+  "build/course_summary.out" 1789314891.62152 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "course_summary.tex" 1789314656.94069 16483 a50cd57c58222668c988b0b1a1c0757a ""
   (generated)
   "build/course_summary.aux"

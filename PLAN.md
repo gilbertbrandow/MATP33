@@ -74,13 +74,13 @@ The weekly sections below reproduce the official course programme. References to
 
 ## To Review
 
-- [ ] Theorem: Fundamental Theorem of Finite Abelian Groups ([Lecture 0](lectures/Lecture%200.pdf))
-- [ ] Proof: First Isomorphism Theorem ([Lecture 0](lectures/Lecture%200.pdf))
-- [ ] Proof: Second Isomorphism Theorem ([Lecture 0](lectures/Lecture%200.pdf))
-- [ ] Proof: Third Isomorphism Theorem ([Lecture 0](lectures/Lecture%200.pdf))
-- [ ] Proof: Orbit-Stabiliser Theorem ([Lecture 1](lectures/Lecture%201.pdf))
+- [x] Theorem: Fundamental Theorem of Finite Abelian Groups ([Lecture 0](lectures/Lecture%200.pdf))
+- [x] Proof: First Isomorphism Theorem ([Lecture 0](lectures/Lecture%200.pdf))
+- [x] Proof: Second Isomorphism Theorem ([Lecture 0](lectures/Lecture%200.pdf))
+- [x] Proof: Third Isomorphism Theorem ([Lecture 0](lectures/Lecture%200.pdf))
+- [x] Proof: Orbit-Stabiliser Theorem ([Lecture 1](lectures/Lecture%201.pdf))
 - [ ] Exercise: [Exercise 1.5](exercises/Exercise%201.pdf)
-- [ ] Proof of Sylows Theorems
+- [ x Proof of Sylows Theorems
 - [ ] Exercise 4.2
 - [ ] Proof Schurs Lemma Theorem 5.6
 - [ ] Proof Theorem 5.9
