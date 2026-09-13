@@ -21,6 +21,36 @@
 \begin{document}
 \maketitle
 
+\section*{Lecture 0 — Background Results}
+
+\begin{theorem}[First Isomorphism Theorem]
+Let $f : G \to H$ be a group homomorphism. Then $\ker f \trianglelefteq G$ and $\operatorname{im} f \cong G / \ker f$.
+\end{theorem}
+
+\begin{theorem}[Second Isomorphism Theorem]
+Let $G$ be a group, $H \leq G$, and $N \trianglelefteq G$. Then $HN \leq G$, $H \cap N \trianglelefteq H$, and $HN/N \cong H/(H \cap N)$.
+\end{theorem}
+
+\begin{theorem}[Third Isomorphism Theorem]
+If $K \trianglelefteq G$ and $K \leq L \trianglelefteq G$, then $(G/K)/(L/K) \cong G/L$.
+\end{theorem}
+
+\begin{theorem}[Correspondence Theorem]
+Let $N \trianglelefteq G$. Every subgroup of $G/N$ is of the form $H/N$ where $N \leq H \leq G$, and conversely if $N \leq H \leq G$ then $H/N \leq G/N$.
+\end{theorem}
+
+\begin{theorem}[Lagrange]
+If $H \leq G$ and $G$ is finite, then $|H|$ divides $|G|$.
+\end{theorem}
+
+\begin{theorem}[Fundamental Theorem of Finitely Generated Abelian Groups]
+Let $A$ be a finitely generated abelian group. Then
+\[
+  A \cong \mathbb{Z}^s \oplus \mathbb{Z}/a_1\mathbb{Z} \oplus \cdots \oplus \mathbb{Z}/a_r\mathbb{Z},
+\]
+where $s \geq 0$ and $a_1 \mid a_2 \mid \cdots \mid a_r$ are non-zero non-units in $\mathbb{Z}$. This decomposition is unique.
+\end{theorem}
+
 \section*{Lecture 1}
 
 \begin{theorem}[1.10]
@@ -190,6 +220,21 @@ Let $X$ be the set of all colourings, so $|X| = n^p$. The cyclic group $G = \lan
   k = \frac{1}{p}\left(n^p + (p-1)n\right).
 \]
 \end{remark}
+
+
+\section*{Lecture 3}
+
+\begin{theorem}[3.5 — First Sylow Theorem]
+Let $G$ be a finite group and $p$ a prime. If $p^m \mid |G|$, then $G$ has a subgroup of order $p^m$.
+\end{theorem}
+
+\begin{proof}
+If $m = 0$ the result is trivial. We proceed by induction on $n = |G|$, the case $n = 1$ being trivial. Assume the result holds for all groups of order less than $n$.
+
+\textit{Case 1: $p \mid |Z(G)|$.} By the Fundamental Theorem of Finitely Generated Abelian Groups, $Z(G)$ contains an element $a$ of order $p$. Let $C = \langle a \rangle$. Since $a \in Z(G)$, we have $C \trianglelefteq G$, and $|G/C| = n/p$, which is divisible by $p^{m-1}$. By the induction hypothesis, $G/C$ has a subgroup of order $p^{m-1}$, which by the Correspondence Theorem is of the form $H/C$ for some $H \leq G$. Then $|H| = |H/C| \cdot |C| = p^{m-1} \cdot p = p^m$.
+
+\textit{Case 2: $p \nmid |Z(G)|$.} From the class equation $n = |Z(G)| + \sum_a |G : C_G(a)|$, since $p \mid n$ but $p \nmid |Z(G)|$, there must exist some $a \notin Z(G)$ with $p \nmid |G : C_G(a)|$. Since $|G| = |G : C_G(a)| \cdot |C_G(a)|$ and $p^m \mid |G|$ but $p \nmid |G : C_G(a)|$, it follows that $p^m \mid |C_G(a)|$. Since $a \notin Z(G)$, we have $C_G(a) \neq G$, so $|C_G(a)| < n$. By the induction hypothesis $C_G(a)$ contains a subgroup of order $p^m$, which is also a subgroup of $G$.
+\end{proof}
 
 
 \end{document}
