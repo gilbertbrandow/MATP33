@@ -47,4 +47,47 @@ Hence $\varphi(a) \in S_X$. To see $\varphi$ is a homomorphism, let $a, b \in G$
 \end{proof}
 
 
+\begin{theorem}[1.11 — Cayley's Theorem]
+Every group $G$ is isomorphic to a subgroup of the symmetric group $S_G$.
+\end{theorem}
+
+\begin{proof}
+By Theorem 1.10(i), left translation $a \cdot x := ax$ gives a homomorphism $\varphi : G \to S_G$.
+If $a \in \ker\varphi$, then $\varphi(a) = \mathrm{id}_G$, so $ax = x$ for all $x \in G$, giving $a = e$.
+Hence $\ker\varphi = \{e\}$, and by the First Isomorphism Theorem $G \cong G/\ker\varphi \cong \operatorname{im}\varphi \leq S_G$.
+\end{proof}
+
+
+\begin{theorem}[1.24 — Orbit-Stabiliser Theorem]
+Let $G$ be a group acting on a set $X$. Then the set of all orbits in $X$ under $G$ is a partition of $X$. Furthermore, for each $x \in X$ there is a bijection $Gx \to G/G_x$, and hence
+\[
+  |Gx| = |G : G_x|.
+\]
+Therefore, if $X$ is finite,
+\[
+  |X| = \sum_{x \in C} |G : G_x|,
+\]
+where $C \subseteq X$ contains exactly one element from each orbit.
+\end{theorem}
+
+\begin{proof}
+\textit{(Partition.)} Define $x \sim y$ if $x = ay$ for some $a \in G$. This is an equivalence relation: reflexivity follows from $e \cdot x = x$, symmetry from $x = ay \Rightarrow y = a^{-1}x$, and transitivity from $x = ay,\, y = bz \Rightarrow x = (ab)z$. The equivalence class of $x$ is exactly the orbit $Gx$, so the orbits partition $X$.
+
+\textit{(Bijection $Gx \to G/G_x$.)} Define
+\[
+  \varphi : Gx \to G/G_x, \qquad ax \mapsto aG_x.
+\]
+The key observation is the following chain of equivalences, for any $a, b \in G$:
+\[
+  ax = bx \iff a^{-1}bx = x \iff a^{-1}b \in G_x \iff aG_x = bG_x.
+\]
+\begin{itemize}
+  \item \textit{Well-defined:} If $ax = bx$ (the same orbit element written using two different group elements), then $aG_x = bG_x$, so the coset $\varphi$ assigns does not depend on the choice of representative.
+  \item \textit{Injective:} If $\varphi(ax) = \varphi(bx)$, i.e.\ $aG_x = bG_x$, then $ax = bx$ by the chain above.
+  \item \textit{Surjective:} Take any coset $aG_x \in G/G_x$. Since $a \in G$, we have $ax \in Gx$, and $\varphi(ax) = aG_x$.
+\end{itemize}
+Hence $\varphi$ is a bijection, giving $|Gx| = |G/G_x| = |G : G_x|$. Summing over one representative per orbit gives $|X| = \sum_{x \in C} |G : G_x|$.
+\end{proof}
+
+
 \end{document}
