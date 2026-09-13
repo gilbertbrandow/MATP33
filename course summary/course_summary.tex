@@ -224,6 +224,10 @@ Let $X$ be the set of all colourings, so $|X| = n^p$. The cyclic group $G = \lan
 
 \section*{Lecture 3}
 
+\begin{definition}[p-group, Sylow p-subgroup]
+Let $p$ be a prime. A group $G$ is a \emph{$p$-group} if every element of $G$ has order a power of $p$. If $G$ is finite and $p^m \mid |G|$ but $p^{m+1} \nmid |G|$, then any subgroup of $G$ of order $p^m$ is called a \emph{Sylow $p$-subgroup} of $G$.
+\end{definition}
+
 \begin{theorem}[3.5 — First Sylow Theorem]
 Let $G$ be a finite group and $p$ a prime. If $p^m \mid |G|$, then $G$ has a subgroup of order $p^m$.
 \end{theorem}
@@ -235,6 +239,23 @@ If $m = 0$ the result is trivial. We proceed by induction on $n = |G|$, the case
 
 \textit{Case 2: $p \nmid |Z(G)|$.} From the class equation $n = |Z(G)| + \sum_a |G : C_G(a)|$, since $p \mid n$ but $p \nmid |Z(G)|$, there must exist some $a \notin Z(G)$ with $p \nmid |G : C_G(a)|$. Since $|G| = |G : C_G(a)| \cdot |C_G(a)|$ and $p^m \mid |G|$ but $p \nmid |G : C_G(a)|$, it follows that $p^m \mid |C_G(a)|$. Since $a \notin Z(G)$, we have $C_G(a) \neq G$, so $|C_G(a)| < n$. By the induction hypothesis $C_G(a)$ contains a subgroup of order $p^m$, which is also a subgroup of $G$.
 \end{proof}
+
+\begin{corollary}[3.6 — Cauchy's Theorem]
+If $p$ is a prime dividing $|G|$, then $G$ has an element of order $p$.
+\end{corollary}
+
+\begin{proof}
+By the First Sylow Theorem, $G$ has a subgroup $H$ of order $p$. Every non-identity element of $H$ has order $p$.
+\end{proof}
+
+\begin{corollary}[3.7]
+A finite group $G$ is a $p$-group if and only if $|G|$ is a power of $p$.
+\end{corollary}
+
+\begin{proof}
+If $|G|$ is a power of $p$, then by Lagrange every element order divides $|G|$, hence is a power of $p$. Conversely, if $|G|$ is not a power of $p$, then some prime $q \neq p$ divides $|G|$, and by Cauchy's Theorem $G$ has an element of order $q$, contradicting that $G$ is a $p$-group.
+\end{proof}
+
 
 
 \end{document}
