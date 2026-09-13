@@ -23,5 +23,28 @@
 
 \section*{Lecture 1}
 
+\begin{theorem}[1.10]
+Let $G$ be a group and $X$ a set. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item If $X$ is a $G$-set, then the action of $G$ on $X$ induces a homomorphism $\varphi : G \to S_X$;
+  \item Any homomorphism $\varphi : G \to S_X$ induces an action of $G$ on $X$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) Define $\varphi : G \to S_X$ by $(\varphi(a))(x) = a \cdot x$ for $a \in G$ and $x \in X$.
+We must first check that $\varphi(a) \in S_X$ for each $a \in G$, i.e.\ that the function $x \mapsto a \cdot x$ is a bijection $X \to X$.
+\begin{itemize}
+  \item \textit{Injective:} Suppose $a \cdot x = a \cdot y$. Then $x = a^{-1} \cdot (a \cdot x) = a^{-1} \cdot (a \cdot y) = y$.
+  \item \textit{Surjective:} For any $x \in X$, we have $a \cdot (a^{-1} \cdot x) = x$, so $x \in \operatorname{im}(\varphi(a))$.
+\end{itemize}
+Hence $\varphi(a) \in S_X$. To see $\varphi$ is a homomorphism, let $a, b \in G$. Then for all $x \in X$,
+\[
+  (\varphi(ab))(x) = (ab) \cdot x = a \cdot (b \cdot x) = (\varphi(a))((\varphi(b))(x)) = (\varphi(a)\varphi(b))(x).
+\]
+
+(ii) Define $a \cdot x := (\varphi(a))(x)$. Then $(ab) \cdot x = (\varphi(ab))(x) = (\varphi(a)\varphi(b))(x) = a \cdot (b \cdot x)$, and $e \cdot x = (\varphi(e))(x) = x$. Hence $X$ is a $G$-set.
+\end{proof}
+
 
 \end{document}
