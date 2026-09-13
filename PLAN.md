@@ -80,8 +80,8 @@ The weekly sections below reproduce the official course programme. References to
 - [x] Proof: Third Isomorphism Theorem ([Lecture 0](lectures/Lecture%200.pdf))
 - [x] Proof: Orbit-Stabiliser Theorem ([Lecture 1](lectures/Lecture%201.pdf))
 - [ ] Exercise: [Exercise 1.5](exercises/Exercise%201.pdf)
-- [ x Proof of Sylows Theorems
-- [ ] Exercise 4.2
+- [x] Proof of Sylows Theorems
+- [x] Exercise 4.2
 - [ ] Proof Schurs Lemma Theorem 5.6
 - [ ] Proof Theorem 5.9
 - [ ] Exercise 6.2
