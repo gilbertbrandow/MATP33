@@ -58,6 +58,37 @@ Hence $\ker\varphi = \{e\}$, and by the First Isomorphism Theorem $G \cong G/\ke
 \end{proof}
 
 
+\begin{definition}[Normal core]
+Let $G$ be a group and $H \leq G$. The \emph{normal core} of $H$ in $G$ is
+\[
+  \operatorname{core}(H) := \bigcap_{x \in G} xHx^{-1}.
+\]
+It is the largest normal subgroup of $G$ contained in $H$.
+\end{definition}
+
+\begin{theorem}[1.12]
+Let $G$ be a group and $H \leq G$ a subgroup of index $n$. Then there is a homomorphism $\varphi : G \to S_n$ such that $\ker\varphi = \operatorname{core}(H)$.
+\end{theorem}
+
+\begin{proof}
+Since $|G/H| = n$, we have $S_{G/H} \cong S_n$. By Theorem 1.10(i), the action of $G$ on the coset space $G/H$ by left multiplication gives a homomorphism $\varphi : G \to S_n$ with $\varphi(a)(xH) = axH$. Then
+\begin{align*}
+  \ker\varphi &= \{a \in G \mid axH = xH \text{ for all } x \in G\} \\
+              &= \{a \in G \mid x^{-1}ax \in H \text{ for all } x \in G\} \\
+              &= \{a \in G \mid a \in xHx^{-1} \text{ for all } x \in G\} \\
+              &= \bigcap_{x \in G} xHx^{-1} = \operatorname{core}(H). \qedhere
+\end{align*}
+\end{proof}
+
+\begin{corollary}[1.13]
+Let $G$ be a group with a normal subgroup $H$ of index $n$. Then $G/H$ is isomorphic to a subgroup of $S_n$.
+\end{corollary}
+
+\begin{proof}
+Since $H \trianglelefteq G$, conjugation fixes $H$, so $\operatorname{core}(H) = \bigcap_{x \in G} xHx^{-1} = H$. By Theorem 1.12, $\ker\varphi = H$, and by the First Isomorphism Theorem $G/H \cong \operatorname{im}\varphi \leq S_n$.
+\end{proof}
+
+
 \begin{theorem}[1.24 — Orbit-Stabiliser Theorem]
 Let $G$ be a group acting on a set $X$. Then the set of all orbits in $X$ under $G$ is a partition of $X$. Furthermore, for each $x \in X$ there is a bijection $Gx \to G/G_x$, and hence
 \[
@@ -87,6 +118,19 @@ The key observation is the following chain of equivalences, for any $a, b \in G$
   \item \textit{Surjective:} Take any coset $aG_x \in G/G_x$. Since $a \in G$, we have $ax \in Gx$, and $\varphi(ax) = aG_x$.
 \end{itemize}
 Hence $\varphi$ is a bijection, giving $|Gx| = |G/G_x| = |G : G_x|$. Summing over one representative per orbit gives $|X| = \sum_{x \in C} |G : G_x|$.
+\end{proof}
+
+
+\begin{theorem}[1.25 — Class Equation]
+Let $G$ be a finite group. Then the conjugacy classes partition $G$, and
+\[
+  |G| = \sum_{a \in C} |G : C_G(a)|,
+\]
+where $C \subseteq G$ contains exactly one element from each conjugacy class.
+\end{theorem}
+
+\begin{proof}
+Let $G$ act on itself by conjugation, i.e.\ $a \cdot x = axa^{-1}$. The orbit of $x$ under this action is its conjugacy class $\operatorname{ccl}(x) = \{axa^{-1} \mid a \in G\}$, and the stabiliser of $x$ is $G_x = \{a \in G \mid axa^{-1} = x\} = C_G(x)$. Applying Theorem 1.24 directly gives the partition into orbits and $|G| = \sum_{a \in C} |G : C_G(a)|$.
 \end{proof}
 
 
