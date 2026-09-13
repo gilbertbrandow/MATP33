@@ -134,4 +134,62 @@ Let $G$ act on itself by conjugation, i.e.\ $a \cdot x = axa^{-1}$. The orbit of
 \end{proof}
 
 
+\section*{Lecture 2}
+
+\begin{theorem}[2.1]
+Let $G$ be a finite group of order $p^n$, where $p$ is prime and $n \in \mathbb{N}$. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item $G$ has a non-trivial centre $Z(G)$;
+  \item $Z(G) \cap K$ is non-trivial for any non-trivial normal subgroup $K$ of $G$;
+  \item if $H$ is a proper subgroup of $G$, then $H \subsetneq N_G(H)$. In particular, if $|H| = p^{n-1}$ then $H \trianglelefteq G$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) Since $x \in Z(G)$ iff $\operatorname{ccl}(x) = \{x\}$, the class equation refines to
+\[
+  p^n = |Z(G)| + \sum_{x \in C} |G : C_G(x)|,
+\]
+where $C$ runs over conjugacy classes with more than one element. For each $x \in C$, $|C_G(x)|$ properly divides $p^n$, so $p \mid |G : C_G(x)|$. Hence $p$ divides the sum, and therefore $p \mid |Z(G)|$. Since $e \in Z(G)$, we have $|Z(G)| \geq 1$, so in fact $|Z(G)| \geq p > 1$.
+
+(ii) Intersecting the class decomposition of $G$ with $K$ gives $|K| = |Z(G) \cap K| + \sum_{x \in C} |\operatorname{ccl}(x) \cap K|$. Since $K \trianglelefteq G$, each conjugacy class is either disjoint from $K$ or contained in $K$, so $p \mid \sum |\operatorname{ccl}(x) \cap K|$. As $p \mid |K|$, we get $p \mid |Z(G) \cap K|$, and the same argument as (i) gives $Z(G) \cap K$ non-trivial.
+
+(iii) Let $M$ be a maximal normal subgroup of $G$ contained in $H$. Then $G/M$ is a p-group, so by (i) it has a non-trivial centre $L/M \trianglelefteq G/M$. By the Correspondence Theorem, $L \trianglelefteq G$. Since $M \subsetneq L$ strictly, maximality of $M$ forces $L \not\subseteq H$.
+
+It remains to show $L \subseteq N_G(H)$. To show $\ell \in N_G(H)$ we need $\ell^{-1}h\ell \in H$ for all $h \in H$. Take $h \in H$ and $\ell \in L$. Since $\ell M \in L/M = Z(G/M)$, it commutes with every coset, so $(\ell M)(hM) = (hM)(\ell M)$, i.e.\ $\ell h M = h\ell M$. This gives $\ell^{-1}h\ell \in hM$. Since $h \in H$ and $M \subseteq H$, we have $hM \subseteq H$, so $\ell^{-1}h\ell \in H$. Hence $\ell \in N_G(H)$, so $L \subseteq N_G(H)$.
+
+Since $L \subseteq N_G(H)$ but $L \not\subseteq H$, we have $H \subsetneq N_G(H)$. Finally, if $|H| = p^{n-1}$ then $N_G(H)$ has order strictly greater than $p^{n-1}$, and the only possibility is $p^n = |G|$, so $N_G(H) = G$ and $H \trianglelefteq G$.
+\end{proof}
+
+
+\begin{theorem}[2.2 — Burnside's Lemma]
+Let $G$ be a finite group acting on a finite set $X$, and for $g \in G$ let $X_g := \{x \in X \mid gx = x\}$. Then the number $k$ of orbits in $X$ under $G$ is
+\[
+  k = \frac{1}{|G|} \sum_{g \in G} |X_g|.
+\]
+\end{theorem}
+
+\begin{proof}
+Let $S := \{(g, x) \in G \times X \mid gx = x\}$. Fixing $g$ gives $|S| = \sum_{g \in G}|X_g|$; fixing $x$ gives $|S| = \sum_{x \in X}|G_x|$. Let $C \subseteq X$ contain one element from each orbit. By the Orbit-Stabiliser Theorem, $|G_x| = |G|/|Gx| = |G|/|Ga|$ for all $x \in Ga$. Hence
+\[
+  \frac{1}{|G|}\sum_{g \in G}|X_g|
+  = \frac{|S|}{|G|}
+  = \frac{1}{|G|}\sum_{x \in X}|G_x|
+  = \frac{1}{|G|}\sum_{a \in C}\sum_{x \in Ga}\frac{|G|}{|Ga|}
+  = \frac{1}{|G|}\sum_{a \in C}|G|
+  = k. \qedhere
+\]
+\end{proof}
+
+
+\begin{remark}[Pólya counting]
+Burnside's Lemma counts distinct objects under symmetry. As an illustration: how many necklaces with $p$ beads ($p$ prime) can be made from $n$ colours, where two necklaces are the same if one is a rotation of the other?
+
+Let $X$ be the set of all colourings, so $|X| = n^p$. The cyclic group $G = \langle a \rangle$ of order $p$ acts on $X$ by rotation. For the identity, $X_e = X$ so $|X_e| = n^p$. For any $g \neq e$: since $|G|$ is prime, $g$ generates $G$, so a necklace fixed by $g$ must be fixed by all rotations, meaning all beads have the same colour. Hence $|X_g| = n$. Burnside then gives
+\[
+  k = \frac{1}{p}\left(n^p + (p-1)n\right).
+\]
+\end{remark}
+
+
 \end{document}
