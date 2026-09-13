@@ -258,4 +258,19 @@ If $|G|$ is a power of $p$, then by Lagrange every element order divides $|G|$, 
 
 
 
+\begin{theorem}[3.8 — Second Sylow Theorem]
+Let $G$ be a finite group and $p$ a prime. All Sylow $p$-subgroups of $G$ are conjugate.
+\end{theorem}
+
+\begin{proof}
+Let $S, H \in \mathrm{Syl}_p(G)$. Let $S$ act on the coset space $G/H$ by left translation: $s \cdot gH = sgH$.
+
+\textit{Orbits have $p$-power size.} By the Orbit-Stabiliser Theorem, each orbit has size $|S : S_{gH}|$, which divides $|S| = p^m$, hence is a power of $p$.
+
+\textit{There must be a fixed point.} Since $H$ is a Sylow $p$-subgroup, $p \nmid |G|/|H| = |G/H|$. Writing $|G/H|$ as a sum of orbit sizes, each of which is a power of $p$, the only way this sum is not divisible by $p$ is if at least one orbit has size $p^0 = 1$.
+
+\textit{A fixed point gives conjugacy.} If $gH$ is a fixed point, then $s \cdot gH = gH$ for all $s \in S$, so $g^{-1}sg \in H$ for all $s \in S$. Hence $g^{-1}Sg \subseteq H$, and since $|g^{-1}Sg| = |S| = |H|$, we get $g^{-1}Sg = H$. So $S$ and $H$ are conjugate.
+\end{proof}
+
+
 \end{document}
