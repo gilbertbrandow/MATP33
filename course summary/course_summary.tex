@@ -665,4 +665,32 @@ Let $0 \neq f \in \mathrm{Hom}_R(M,M)$. We show $f$ is invertible and $f^{-1} \i
 where we used that $f$ is itself an $R$-homomorphism in the last step of each line. Injectivity of $f$ gives $f^{-1}(x+y) = f^{-1}(x) + f^{-1}(y)$ and $f^{-1}(rx) = rf^{-1}(x)$.
 \end{proof}
 
+\begin{definition}[5.7 — Completely reducible module]
+Let $R$ be a ring with unity. An $R$-module $M$ is called \emph{completely reducible} (or \emph{semisimple}) if $M = \sum_{\alpha \in \Lambda} M_\alpha$, where each $M_\alpha$ is a simple $R$-submodule.
+\end{definition}
+
+\begin{theorem}[5.9]
+Let $M = \sum_{\alpha \in \Lambda} M_\alpha$ be a sum of simple $R$-submodules, and let $K$ be a submodule of $M$. Then there exists $\Lambda' \subseteq \Lambda$ such that $M = K \oplus \bigl(\bigoplus_{\alpha \in \Lambda'} M_\alpha\bigr)$.
+\end{theorem}
+
+\begin{proof}
+Let $S$ be the family of subsets $A \subseteq \Lambda$ satisfying two conditions: $\bigoplus_{\alpha \in A} M_\alpha$ is a direct sum, and $K \cap \bigoplus_{\alpha \in A} M_\alpha = 0$. Together these mean $K \oplus \bigoplus_{\alpha \in A} M_\alpha$ is a genuine direct sum. Since $\emptyset$ satisfies both conditions trivially, $S \neq \emptyset$. Partially order $S$ by inclusion; every chain $(A_i)$ in $S$ has upper bound $\bigcup A_i$ in $S$. By Zorn's Lemma, $S$ has a maximal element $A$.
+
+Set $N = K \oplus \bigoplus_{\alpha \in A} M_\alpha$. We claim $N = M$. Fix any $\beta \in \Lambda$. Since $M_\beta$ is simple, $M_\beta \cap N$ is either $0$ or $M_\beta$. If $M_\beta \cap N = 0$, then $M_\beta$ intersects neither $K$ nor $\bigoplus_{\alpha \in A} M_\alpha$, so $A \cup \{\beta\}$ would satisfy both conditions in $S$, contradicting maximality of $A$. Hence $M_\beta \cap N = M_\beta$, i.e.\ $M_\beta \subseteq N$, for every $\beta \in \Lambda$. Since $M = \sum_\beta M_\beta$, we conclude $N = M$.
+\end{proof}
+
+\begin{corollary}[5.10]
+If $M = \sum_{\alpha \in \Lambda} M_\alpha$ is a sum of simple $R$-submodules, then there exists $\Lambda' \subseteq \Lambda$ such that $M = \bigoplus_{\alpha \in \Lambda'} M_\alpha$.
+\end{corollary}
+
+\begin{proof}
+Apply Theorem 5.9 with $K = \{0\}$.
+\end{proof}
+
+\begin{definition}[5.11 — Linear independence and basis]
+A sequence $x_1, \ldots, x_n$ in an $R$-module $M$ is \emph{linearly independent} if $\sum_{i=1}^n a_i x_i = 0$ implies $a_1 = \cdots = a_n = 0$ for any $a_i \in R$. A subset $S \subseteq M$ is linearly independent if every finite sequence of distinct elements of $S$ is linearly independent.
+
+A subset $B \subseteq M$ is a \emph{basis} of $M$ if $B$ generates $M$ and $B$ is linearly independent. An $R$-module that has a basis is called a \emph{free module}.
+\end{definition}
+
 \end{document}

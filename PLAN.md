@@ -82,8 +82,8 @@ The weekly sections below reproduce the official course programme. References to
 - [ ] Exercise: [Exercise 1.5](exercises/Exercise%201.pdf)
 - [x] Proof of Sylows Theorems
 - [x] Exercise 4.2
-- [ ] Proof Schurs Lemma Theorem 5.6
-- [ ] Proof Theorem 5.9
+- [x] Proof Schurs Lemma Theorem 5.6
+- [x] Proof Theorem 5.9
 - [ ] Exercise 6.2
 - [ ] Exercise 6.5
 - [ ] Exercise 7.6 (?)
