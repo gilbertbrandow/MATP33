@@ -84,8 +84,8 @@ The weekly sections below reproduce the official course programme. References to
 - [x] Exercise 4.2
 - [x] Proof Schurs Lemma Theorem 5.6
 - [x] Proof Theorem 5.9
-- [ ] Exercise 6.2
-- [ ] Exercise 6.5
+- [x] Exercise 6.2
+- [x] Exercise 6.5
 - [ ] Exercise 7.6 (?)
 - [ ] Proof 5.19
 - [ ] Almost all proofs Lecture 7-8
