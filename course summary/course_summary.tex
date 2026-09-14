@@ -765,4 +765,14 @@ We claim $K = Rk \oplus \ker(\pi|_K)$, where $\ker(\pi|_K) = \{x \in K \mid x_1 
 By induction $\ker(\pi|_K)$ is free of rank $s \leq n-1$, and $Rk \cong R$ is free of rank $1$. Hence $K \cong R^s \oplus R = R^{s+1}$, which has rank $m = s+1 \leq n$.
 \end{proof}
 
+\section*{Lecture 8 — Noetherian and Artinian Modules}
+
+\begin{definition}[6.1 — Noetherian and Artinian modules]
+An $R$-module $M$ is called \emph{Noetherian} if every ascending chain of submodules
+\[
+  M_1 \subseteq M_2 \subseteq M_3 \subseteq \cdots
+\]
+stabilises, i.e.\ there exists $k$ such that $M_k = M_{k+1} = \cdots$. This is called the \emph{ascending chain condition} (ACC). An $R$-module $M$ is called \emph{Artinian} if every descending chain of submodules stabilises (\emph{descending chain condition}, DCC).
+\end{definition}
+
 \end{document}
