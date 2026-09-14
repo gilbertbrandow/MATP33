@@ -570,4 +570,59 @@ Define $g : M/\ker f \to f(M)$ by $g(x + \ker f) = f(x)$. We know from group the
 \]
 \end{proof}
 
+\begin{theorem}[Second Isomorphism Theorem for Modules]
+Let $U$ and $V$ be $R$-submodules of an $R$-module $M$. Then $(U+V)/V \cong U/(U \cap V)$.
+\end{theorem}
+
+\begin{proof}
+Define $f : U \to (U+V)/V$ by $f(u) = u + V$.
+
+\textit{$f$ is an $R$-homomorphism.} For $u_1, u_2 \in U$ and $r \in R$:
+\[
+  f(u_1 + u_2) = (u_1+u_2)+V = (u_1+V)+(u_2+V) = f(u_1)+f(u_2),
+\]
+\[
+  f(ru) = ru+V = r(u+V) = rf(u).
+\]
+
+\textit{$f$ is surjective.} Any element of $(U+V)/V$ has the form $(u+v)+V = u+V = f(u)$ for some $u \in U$, $v \in V$ (since $v \in V$ means $v + V = V$).
+
+\textit{$\ker f = U \cap V$.} We have $f(u) = 0$ iff $u+V = V$ iff $u \in V$, so $\ker f = \{u \in U \mid u \in V\} = U \cap V$.
+
+By the First Isomorphism Theorem, $U/(U \cap V) \cong (U+V)/V$.
+\end{proof}
+
+
+\begin{theorem}[Third Isomorphism Theorem for Modules]
+Let $U \subseteq V$ be $R$-submodules of an $R$-module $M$. Then $(M/U)/(V/U) \cong M/V$.
+\end{theorem}
+
+\begin{proof}
+Define $f : M/U \to M/V$ by $f(x+U) = x+V$.
+
+\textit{$f$ is well-defined.} If $x+U = y+U$ then $x-y \in U \subseteq V$, so $x+V = y+V$.
+
+\textit{$f$ is an $R$-homomorphism.} For $x+U, y+U \in M/U$ and $r \in R$:
+\[
+  f((x+U)+(y+U)) = f((x+y)+U) = (x+y)+V = (x+V)+(y+V) = f(x+U)+f(y+U),
+\]
+\[
+  f(r(x+U)) = f(rx+U) = rx+V = r(x+V) = rf(x+U).
+\]
+
+\textit{$f$ is surjective.} For any $x+V \in M/V$, $f(x+U) = x+V$.
+
+\textit{$\ker f = V/U$.} We have $f(x+U) = 0$ iff $x+V = V$ iff $x \in V$, so $\ker f = \{x+U \mid x \in V\} = V/U$.
+
+By the First Isomorphism Theorem, $(M/U)/(V/U) \cong M/V$.
+\end{proof}
+
+\begin{theorem}[4.33]
+Let $A \leq M$ and $B \leq N$ be $R$-submodules. Then $(M \times N)/(A \times B) \cong M/A \times N/B$.
+\end{theorem}
+
+\begin{proof}
+Define $f : M \times N \to M/A \times N/B$ by $f(m,n) = (m+A,\, n+B)$. This is a surjective $R$-homomorphism, and $\ker f = \{(m,n) \mid m \in A,\, n \in B\} = A \times B$. By the First Isomorphism Theorem, $(M \times N)/(A \times B) \cong M/A \times N/B$.
+\end{proof}
+
 \end{document}
