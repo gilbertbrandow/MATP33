@@ -775,4 +775,152 @@ An $R$-module $M$ is called \emph{Noetherian} if every ascending chain of submod
 stabilises, i.e.\ there exists $k$ such that $M_k = M_{k+1} = \cdots$. This is called the \emph{ascending chain condition} (ACC). An $R$-module $M$ is called \emph{Artinian} if every descending chain of submodules stabilises (\emph{descending chain condition}, DCC).
 \end{definition}
 
+\begin{theorem}[6.5]
+Let $M$ be an $R$-module. The following are equivalent:
+\begin{enumerate}[label=(\roman*)]
+  \item $M$ is Noetherian;
+  \item every submodule of $M$ is finitely generated;
+  \item every non-empty family $S$ of submodules of $M$ has a maximal element.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) $\Rightarrow$ (ii): Let $N \leq M$ and suppose $N$ is not finitely generated. For any finite choice $a_1,\ldots,a_k \in N$ we have $N \neq (a_1,\ldots,a_k)$, so we can always pick $a_{k+1} \in N \setminus (a_1,\ldots,a_k)$. This produces an infinite strictly ascending chain $(a_1) \subsetneq (a_1,a_2) \subsetneq \cdots$, contradicting that $M$ is Noetherian.
+
+(ii) $\Rightarrow$ (iii): Suppose $S$ has no maximal element. Then starting from any $N_0 \in S$ we can always find a strictly larger member, producing an infinite strictly ascending chain $N_0 \subsetneq N_1 \subsetneq N_2 \subsetneq \cdots$. Let $N = \bigcup_i N_i$. For $x, y \in N$ and $r \in R$, both $x$ and $y$ lie in some $N_\ell$ (take the larger index), so $x - y, rx \in N_\ell \subseteq N$; hence $N$ is a submodule. By (ii), $N = (a_1,\ldots,a_n)$ for some $a_j \in N$. Each $a_j$ lies in some $N_{u_j}$, so all generators lie in $N_\mu$ for $\mu = \max\{u_1,\ldots,u_n\}$. But then $N = (a_1,\ldots,a_n) \subseteq N_\mu \subseteq N$, so $N_\mu = N$, contradicting that the chain is strictly ascending.
+
+(iii) $\Rightarrow$ (i): Given an ascending chain $M_1 \subseteq M_2 \subseteq \cdots$, by (iii) the family $\{M_i\}$ has a maximal element $M_k$. Then $M_k = M_{k+1} = \cdots$, so the chain stabilises.
+\end{proof}
+
+\begin{definition}[6.6 — Finitely cogenerated]
+An $R$-module $M$ is \emph{finitely cogenerated} if for every family $(M_\alpha)_{\alpha \in \Lambda}$ of submodules of $M$,
+\[
+  \bigcap_{\alpha \in \Lambda} M_\alpha = 0 \implies \bigcap_{\alpha \in \Lambda'} M_\alpha = 0
+\]
+for some finite subset $\Lambda' \subseteq \Lambda$.
+\end{definition}
+
+\begin{theorem}[6.8]
+Let $M$ be an $R$-module. The following are equivalent:
+\begin{enumerate}[label=(\roman*)]
+  \item $M$ is Artinian;
+  \item every quotient module of $M$ is finitely cogenerated;
+  \item every non-empty family $S$ of submodules of $M$ has a minimal element.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) $\Rightarrow$ (ii): Let $N \leq M$ and take any family $(M_\alpha/N)_{\alpha \in \Lambda}$ of submodules of $M/N$ with $\bigcap_{\alpha \in \Lambda} M_\alpha/N = 0$, i.e.\ $\bigcap_{\alpha \in \Lambda} M_\alpha = N$. Consider the family of finite intersections $\bigl\{\bigcap_{\alpha \in \Lambda'} M_\alpha \mid \Lambda' \subseteq \Lambda \text{ finite}\bigr\}$. As we add more submodules to the intersection it can only get smaller, so this is a descending family of submodules of $M$. Since $M$ is Artinian every descending chain stabilises, so there exists a finite $\Lambda' \subseteq \Lambda$ such that
+\[
+  \bigcap_{\alpha \in \Lambda'} M_\alpha = \bigcap_{\alpha \in \Lambda} M_\alpha = N.
+\]
+Hence $\bigcap_{\alpha \in \Lambda'} M_\alpha/N = 0$, so $M/N$ is finitely cogenerated.
+
+(ii) $\Rightarrow$ (iii): Suppose $S$ has no minimal element. Then starting from any $N_0 \in S$ we can always find a strictly smaller member, producing an infinite strictly descending chain $N_0 \supsetneq N_1 \supsetneq N_2 \supsetneq \cdots$. Let $N = \bigcap_i N_i$, which is a submodule of $M$. By (ii), $M/N$ is finitely cogenerated. The family $(N_i/N)$ of submodules of $M/N$ satisfies $\bigcap_i N_i/N = N/N = 0$, so by finite cogeneration there exists a finite subset, say $\{N_0,\ldots,N_k\}$, with $\bigcap_{i=0}^k N_i/N = 0$, i.e.\ $\bigcap_{i=0}^k N_i = N$. Since the chain is descending, $\bigcap_{i=0}^k N_i = N_k$, so $N_k = N \subseteq N_{k+1} \subsetneq N_k$, a contradiction.
+
+(iii) $\Rightarrow$ (i): Given a descending chain $M_1 \supseteq M_2 \supseteq \cdots$, by (iii) the family $\{M_i\}$ has a minimal element $M_k$. Then $M_k = M_{k+1} = \cdots$, so the chain stabilises.
+\end{proof}
+
+\begin{theorem}[6.9]
+Let $M$ be a Noetherian (respectively Artinian) $R$-module and $K \leq M$ a submodule. Then $K$ and $M/K$ are both Noetherian (respectively Artinian).
+\end{theorem}
+
+\begin{proof}
+\textit{Noetherian case.} By Theorem 6.5, $M$ is Noetherian if and only if every submodule of $M$ is finitely generated. Every submodule of $K$ is also a submodule of $M$, hence finitely generated. By Theorem 6.5 again, $K$ is Noetherian. For $M/K$: by Theorem 4.31 (Correspondence Theorem), every submodule of $M/K$ is of the form $L/K$ for some submodule $L$ with $K \subseteq L \subseteq M$. Since $L$ is a submodule of $M$, it is finitely generated, and hence $L/K$ is finitely generated. By Theorem 6.5, $M/K$ is Noetherian.
+
+\textit{Artinian case.} Any descending chain $K \supseteq L_1 \supseteq L_2 \supseteq \cdots$ of submodules of $K$ is also a descending chain in $M$, so it stabilises. Hence $K$ is Artinian. For $M/K$: a descending chain $M/K \supseteq L_1/K \supseteq L_2/K \supseteq \cdots$ of submodules of $M/K$ corresponds via Theorem 4.31 to a descending chain $M \supseteq L_1 \supseteq L_2 \supseteq \cdots$ in $M$, which stabilises. Hence $M/K$ is Artinian.
+\end{proof}
+
+\begin{theorem}[6.10]
+Let $M$ be an $R$-module and $N \leq M$ a submodule. Then $M$ is Noetherian (respectively Artinian) if and only if both $N$ and $M/N$ are Noetherian (respectively Artinian).
+\end{theorem}
+
+\begin{proof}
+$(\Rightarrow)$ This is Theorem 6.9.
+
+$(\Leftarrow)$ \textit{Noetherian case.} Assume $N$ and $M/N$ are Noetherian. Let $K \leq M$ be any submodule; we show $K$ is finitely generated, which by Theorem 6.5 gives that $M$ is Noetherian.
+
+By the Second Isomorphism Theorem, $K/(N \cap K) \cong (K+N)/N$. Since $(K+N)/N$ is a submodule of $M/N$ and $M/N$ is Noetherian, it is finitely generated by Theorem 6.5, and hence so is $K/(N \cap K)$. Say $K/(N \cap K)$ is generated by $\bar{x}_1, \ldots, \bar{x}_m$ with $x_i \in K$. Then
+\[
+  K = (x_1, \ldots, x_m) + (N \cap K).
+\]
+Since $N \cap K$ is a submodule of $N$ and $N$ is Noetherian, $N \cap K$ is finitely generated by Theorem 6.5, say by $y_1, \ldots, y_n \in N \cap K$. Therefore
+\[
+  K = (x_1, \ldots, x_m, y_1, \ldots, y_n),
+\]
+so $K$ is finitely generated and $M$ is Noetherian.
+
+\textit{Artinian case.} Assume $N$ and $M/N$ are Artinian. Let $M \supseteq K_1 \supseteq K_2 \supseteq \cdots$ be a descending chain in $M$. The induced chains
+\[
+  K_1 \cap N \supseteq K_2 \cap N \supseteq \cdots \quad \text{in } N, \qquad \frac{K_1 + N}{N} \supseteq \frac{K_2 + N}{N} \supseteq \cdots \quad \text{in } M/N
+\]
+both stabilise (since $N$ and $M/N$ are Artinian), say at indices $n$ and $m$ respectively. Set $q = \max\{m, n\}$. For $i \geq q$ we have $K_i \cap N = K_q \cap N$ and $K_i + N = K_q + N$. One can then show using the Second Isomorphism Theorem that $K_i = K_q$, so the original chain stabilises and $M$ is Artinian.
+\end{proof}
+
+
+\begin{corollary}[6.11]
+If $M_1, \ldots, M_n$ are Noetherian (respectively Artinian) $R$-modules, then $M_1 \oplus \cdots \oplus M_n$ is Noetherian (respectively Artinian).
+\end{corollary}
+
+\begin{proof}
+By induction it suffices to treat the case of two modules $M$ and $N$. By Theorem 6.10, to show $M \oplus N$ is Noetherian (respectively Artinian) it suffices to find a single submodule of $M \oplus N$ such that both the submodule and its quotient module are Noetherian (respectively Artinian). Take $M \oplus 0 \leq M \oplus N$. Then:
+\begin{itemize}
+  \item the submodule $M \oplus 0 \cong M$ is Noetherian (respectively Artinian) by assumption;
+  \item the quotient $(M \oplus N)/(M \oplus 0) \cong N$ is Noetherian (respectively Artinian) by assumption.
+\end{itemize}
+Hence by Theorem 6.10, $M \oplus N$ is Noetherian (respectively Artinian).
+\end{proof}
+
+\begin{definition}[6.12 — Noetherian and Artinian rings]
+A ring $R$ is called \emph{left Noetherian} (respectively \emph{left Artinian}) if $R$, regarded as a left $R$-module, is Noetherian (respectively Artinian). By default, Noetherian (respectively Artinian) ring means left Noetherian (respectively left Artinian).
+\end{definition}
+
+\begin{theorem}[6.13]
+Let $R$ be a ring. The following are equivalent:
+\begin{enumerate}[label=(\roman*)]
+  \item $R$ is Noetherian (respectively Artinian);
+  \item every left ideal $A$ of $R$ is finitely generated (respectively every $R/A$ is finitely cogenerated);
+  \item every non-empty set of left ideals of $R$ has a maximal (respectively minimal) element.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+This is Theorem 6.5 (respectively 6.8) applied to $R$ regarded as a left $R$-module, where submodules of $R$ are precisely the left ideals of $R$.
+\end{proof}
+
+
+\begin{theorem}[6.19]
+Let $R_1, \ldots, R_n$ be Noetherian (respectively Artinian) rings. Then $R_1 \oplus \cdots \oplus R_n$ is Noetherian (respectively Artinian).
+\end{theorem}
+
+\begin{proof}
+This follows immediately from Corollary 6.11, viewing each $R_i$ as an $R$-module.
+\end{proof}
+
+\medskip
+\noindent\textbf{Product of ideals.} For ideals $A$ and $B$ in a ring $R$, define
+\[
+  AB = \left\{ \sum_{i=1}^n a_i b_i \;\middle|\; n \in \mathbb{N},\, a_i \in A,\, b_i \in B \right\}.
+\]
+Then $AB$ is again an ideal of $R$.
+
+\begin{definition}[6.20 — Prime ideal]
+Let $R$ be a ring. An ideal $P \neq R$ is \emph{prime} if whenever $A$ and $B$ are ideals in $R$ with $AB \subseteq P$, then $A \subseteq P$ or $B \subseteq P$.
+\end{definition}
+
+\noindent(For commutative $R$ this recovers the classical definition: $ab \in P \Rightarrow a \in P$ or $b \in P$.)
+
+\begin{theorem}[6.21]
+Let $R$ be a ring with unity. Then every maximal ideal is prime.
+\end{theorem}
+
+\begin{proof}
+Let $M$ be a maximal ideal and let $A, B$ be ideals with $AB \subseteq M$. Suppose $A \not\subseteq M$. Since $M$ is maximal, the only ideal strictly containing $M$ is $R$ itself, so $A + M = R$. Write $1 = a + m$ for some $a \in A$ and $m \in M$. For any $b \in B$,
+\[
+  b = 1 \cdot b = (a + m)b = ab + mb \in AB + MB \subseteq M + M = M.
+\]
+Hence $B \subseteq M$, so $M$ is prime.
+\end{proof}
+
+
 \end{document}
