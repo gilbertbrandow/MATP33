@@ -1037,10 +1037,89 @@ Let $B = \sum_{i \in \Lambda} A_i$ be a sum of nilpotent left ideals. Since $R$ 
 It remains to show $B$ is nilpotent. For each $i$, let $n_i \in \mathbb{N}$ be such that $A_i^{n_i} = 0$. Set $N = n_1 + \cdots + n_n$. Any product of $N$ elements from $B = A_1 + \cdots + A_n$, when expanded, is a sum of products of the form $a_{i_1} a_{i_2} \cdots a_{i_N}$ with each $a_{i_k} \in A_{i_k}$. By pigeonhole, among the $N$ indices $i_1, \ldots, i_N \in \{1, \ldots, n\}$, at least one value $j$ appears at least $n_j$ times. The consecutive factors from $A_j$ multiply to give an element of $A_j^{n_j} = 0$. Hence every such product is $0$, so $B^N = 0$.
 \end{proof}
 
+\section*{Lecture 10}
+
 \begin{theorem}[7.7]
 Let $R$ be a Noetherian ring having no non-zero nilpotent ideals. Then $R$ has no non-zero nil ideals.
 \end{theorem}
 
 \noindent\textit{(Proof non-examinable.)}
+
+
+\begin{theorem}[7.8]
+Let $N$ be a nil ideal in a Noetherian ring $R$. Then $N$ is nilpotent.
+\end{theorem}
+
+\begin{proof}
+Let $T$ be the sum of all nilpotent ideals in $R$. By Lemma 7.6, $T$ is itself nilpotent, say $T^k = 0$.
+
+We claim $R/T$ has no non-zero nilpotent ideals. Suppose $A/T$ is a nilpotent ideal in $R/T$, say $(A/T)^m = 0$. Then $(A^m + T)/T = 0$, so $A^m \subseteq T$. Since $T^k = 0$, we get $A^{mk} \subseteq T^k = 0$, so $A$ is nilpotent. Hence $A \subseteq T$, giving $A/T = 0$.
+
+Since $R/T$ is Noetherian (a quotient of a Noetherian ring) and has no non-zero nilpotent ideals, Theorem 7.7 gives that $R/T$ has no non-zero nil ideals. Now $(N + T)/T$ is a nil ideal in $R/T$ (it is nil since $N$ is nil and $T$ is nilpotent hence nil), so $(N+T)/T = 0$, which means $N \subseteq T$. Since $T$ is nilpotent, $N$ is nilpotent.
+\end{proof}
+
+\begin{lemma}[7.9]
+Let $A$ be a minimal left ideal in a ring $R$. Then either $A^2 = 0$ or $A = Re$ for some idempotent $e \in R$.
+\end{lemma}
+
+\begin{proof}
+Assume $A^2 \neq 0$.
+
+\textit{Step 1: Find $e \in A$ with $ea = a$.}
+Since $A^2 \neq 0$, there exists $a \in A$ with $Aa \neq 0$. The set $Aa = \{ca \mid c \in A\}$ is a left ideal contained in $A$ (since $A$ is a left ideal and $a \in A$). By minimality of $A$, we have $Aa = A$. In particular, there exists $e \in A$ with $ea = a$.
+
+\textit{Step 2: Show $e^2 = e$.}
+We compute $(e^2 - e)a = e(ea) - ea = ea - ea = 0$. To conclude $e^2 = e$, define the left annihilator of $a$ in $A$:
+\[
+  \mathrm{Ann}_A(a) := \{c \in A \mid ca = 0\}.
+\]
+This is a left ideal of $R$ contained in $A$. Since $ea = a \neq 0$, we have $e \notin \mathrm{Ann}_A(a)$, so $\mathrm{Ann}_A(a) \neq A$. By minimality of $A$, we conclude $\mathrm{Ann}_A(a) = 0$. Since $e^2 - e \in A$ and $(e^2 - e)a = 0$, we get $e^2 - e \in \mathrm{Ann}_A(a) = 0$, hence $e^2 = e$.
+
+\textit{Step 3: Show $A = Re$.}
+Since $e \in A$ and $A$ is a left ideal, $Re \subseteq A$. Since $e \neq 0$ (as $ea = a \neq 0$), we have $Re \neq 0$. By minimality of $A$, $Re = A$.
+\end{proof}
+
+\begin{theorem}[7.10 — Wedderburn--Artin]
+Let $R$ be a left (or right) Artinian ring with unity and no non-zero nilpotent ideals. Then
+\[
+  R \cong M_{n_1}(D_1) \oplus \cdots \oplus M_{n_k}(D_k)
+\]
+for some $n_1, \ldots, n_k \in \mathbb{N}$ and division rings $D_1, \ldots, D_k$.
+\end{theorem}
+
+\noindent\textit{(Proof to be added. Note: the subclaim within the proof is non-examinable.)}
+
+\begin{theorem}[7.11]
+Let $R$ be a left (or right) Artinian ring with unity and no non-zero nilpotent ideals. Then $R$ is also right and left Artinian, and right and left Noetherian.
+\end{theorem}
+
+\noindent\textit{(Non-examinable. Follows from Wedderburn--Artin and the fact that matrix rings over division rings are Noetherian and Artinian on both sides.)}
+
+\begin{theorem}[7.13 — Maschke]
+If $G$ is a finite group, then
+\[
+  \mathbb{C}[G] \cong M_{n_1}(\mathbb{C}) \oplus \cdots \oplus M_{n_k}(\mathbb{C})
+\]
+for some $n_1, \ldots, n_k \in \mathbb{N}$.
+\end{theorem}
+
+\noindent\textit{(Non-examinable. Follows from Wedderburn--Artin: one shows $\mathbb{C}[G]$ has no non-zero nilpotent ideals and is Artinian, then uses that the only division ring containing $\mathbb{C}$ in its centre as an algebraically closed field is $\mathbb{C}$ itself.)}
+
+\begin{theorem}[7.14]
+Let $R$ be a ring with unity. The following are equivalent:
+\begin{enumerate}[label=(\roman*)]
+  \item $R$ is left Artinian with no non-zero nilpotent ideals;
+  \item $R$ is left Artinian with no non-zero nil ideals;
+  \item $R$ is a finite direct sum of minimal left ideals;
+  \item every left ideal of $R$ is of the form $Re$ for some idempotent $e$;
+  \item $R$ is a finite direct sum of matrix rings over division rings.
+\end{enumerate}
+\end{theorem}
+
+\noindent\textit{(Non-examinable.)}
+
+\begin{definition}[7.15 — Semisimple Artinian ring]
+A ring satisfying any of the equivalent conditions of Theorem 7.14 is called a \emph{semisimple Artinian ring}.
+\end{definition}
 
 \end{document}

@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1789586711.02769 "/Users/simongustafsson/Desktop/Bachelors in Mathematics/MATP33/course summary/course_summary.tex" "build/course_summary.pdf" "course_summary" 1789586711.75525 0
-  "/Users/simongustafsson/Desktop/Bachelors in Mathematics/MATP33/course summary/course_summary.tex" 1789586710.83296 53303 479fd7452927249e3e469c8f4bd7995a ""
+["pdflatex"] 1789590760.45622 "/Users/simongustafsson/Desktop/Bachelors in Mathematics/MATP33/course summary/course_summary.tex" "build/course_summary.pdf" "course_summary" 1789590761.28513 0
+  "/Users/simongustafsson/Desktop/Bachelors in Mathematics/MATP33/course summary/course_summary.tex" 1789590760.21766 60507 6a4e315b091669818b763ce5985a1123 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -32,6 +32,7 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
@@ -101,9 +102,9 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1725786739.30054 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1725786567 8221431 0e3ed4c0ce3a607b82f78dc061b52468 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "build/course_summary.aux" 1789586711.69258 163 c932d0f64ea66735aa068a9e0f14abda "pdflatex"
-  "build/course_summary.out" 1789586711.40987 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "course_summary.tex" 1789586710.83296 53303 479fd7452927249e3e469c8f4bd7995a ""
+  "build/course_summary.aux" 1789590761.21102 163 faa38c693588dbcde51c930594bab6cb "pdflatex"
+  "build/course_summary.out" 1789590760.9004 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "course_summary.tex" 1789590760.21766 60507 6a4e315b091669818b763ce5985a1123 ""
   (generated)
   "build/course_summary.aux"
   "build/course_summary.log"
