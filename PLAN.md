@@ -90,9 +90,9 @@ The weekly sections below reproduce the official course programme. References to
 - [ ] Proof 5.19
 - [x] Almost all proofs Lecture 7-8
 - [ ] Theorem 6.5 from Lecture 8
-- [ ] Exercise 8.1
-- [ ] Exercise 8.3
-- [ ] Proof of Hilberts basis theorem (6.23)
+- [x] Exercise 8.1
+- [x] Exercise 8.3
+- [x] Proof of Hilberts basis theorem (6.23)
 - [ ] Extra questions exercises 9
 - [ ] Exercises 10.3
 - [ ] Extra questions exercises 10

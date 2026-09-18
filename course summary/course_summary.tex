@@ -1087,7 +1087,56 @@ Let $R$ be a left (or right) Artinian ring with unity and no non-zero nilpotent 
 for some $n_1, \ldots, n_k \in \mathbb{N}$ and division rings $D_1, \ldots, D_k$.
 \end{theorem}
 
-\noindent\textit{(Proof to be added. Note: the subclaim within the proof is non-examinable.)}
+\begin{proof}
+We build the result from two claims, then combine them.
+
+\medskip
+\noindent\textbf{Claim 1.} \textit{Each non-zero left ideal $A$ of $R$ is of the form $Re$ for some idempotent $e \in R$.}
+
+\smallskip
+By Lemma~7.9, every minimal left ideal is either nilpotent or of the form $Re$ for some idempotent $e$. Since $R$ has no non-zero nilpotent ideals, every minimal left ideal is of the form $Re$.
+
+Now let $A$ be any non-zero left ideal. Since $R$ is Artinian, $A$ contains a minimal left ideal, hence a non-zero idempotent. Thus the family
+\[
+  \mathcal{F} = \{ R(1-f) \cap A \mid f \text{ a non-zero idempotent in } A \}
+\]
+is non-empty, and by the Artinian condition has a minimal member $R(1-e) \cap A$.
+
+\medskip
+\noindent\textbf{Subclaim} \textit{(non-examinable).} $R(1-e) \cap A = 0$.
+
+\medskip
+Invoking the subclaim: for any $a \in A$, $a(1-e) \in R(1-e) \cap A = 0$, so $a = ae \in Re$. Hence $A \subseteq Re \subseteq A$, giving $A = Re$.
+
+\medskip
+\noindent\textbf{Claim 2.} \textit{$R = Re_1 \oplus \cdots \oplus Re_n$ is a finite direct sum of minimal left ideals.}
+
+\smallskip
+Let $S$ be the sum of all minimal left ideals in $R$; since $R$ is Artinian it has at least one minimal left ideal, so $S \neq 0$. By Claim~1, $S = Re$ for some idempotent $e$.
+
+Suppose $R(1-e) \neq 0$. Then $R(1-e)$ is a non-zero left ideal, so by the Artinian condition it contains a minimal left ideal $A$. But $A \subseteq S = Re$, giving $A \subseteq Re \cap R(1-e)$. For any $x \in Re \cap R(1-e)$, write $x = ae = b(1-e)$ for some $a, b \in R$. Then $xe = ae^2 = ae = x$, and also $xe = b(1-e)e = b(e - e^2) = 0$, so $x = 0$. Hence $Re \cap R(1-e) = 0$, giving $A = 0$, a contradiction.
+
+Therefore $R(1-e) = 0$. Since $R$ has unity, $1 - e = 0$, i.e.\ $e = 1$, so $S = R$.
+
+Thus $R$ is the sum of all its minimal left ideals. By Theorem~5.9 there exists a subfamily $(A_i)_{i \in \Lambda'}$ such that $R = \bigoplus_{i \in \Lambda'} A_i$. To see this is finite, write $1 = e_{i_1} + \cdots + e_{i_n}$ as a finite sum with $e_{i_j} \in A_{i_j}$. Then for any $r \in R$, $r = r \cdot 1 = re_{i_1} + \cdots + re_{i_n}$, so $R = Re_{i_1} \oplus \cdots \oplus Re_{i_n}$. After reindexing, $R = Re_1 \oplus \cdots \oplus Re_n$.
+
+\medskip
+\noindent\textbf{Conclusion.} From Claim~2, $R = Re_1 \oplus \cdots \oplus Re_n$. Among $Re_1,\ldots,Re_n$, select a maximal pairwise non-isomorphic subfamily; after reindexing call it $N_1 = Re_1,\ldots, N_k = Re_k$. For each $j$, let $n_j$ be the number of summands isomorphic to $N_j$, so that
+\[
+  R = \underbrace{(N_1 \oplus \cdots \oplus N_1)}_{n_1} \oplus \cdots \oplus \underbrace{(N_k \oplus \cdots \oplus N_k)}_{n_k}.
+\]
+
+By Schur's Lemma~5.6, any non-zero homomorphism between simple modules is an isomorphism. Therefore $\mathrm{Hom}_R(N_i, N_j) = 0$ whenever $i \neq j$ (since $N_i \not\cong N_j$), and $D_j := \mathrm{Hom}_R(N_j, N_j)$ is a division ring. Invoking Theorem~4.30 on the decomposition above, the off-diagonal blocks vanish and we get
+\[
+  \mathrm{Hom}_R(R, R) \cong M_{n_1}(D_1) \oplus \cdots \oplus M_{n_k}(D_k).
+\]
+
+It remains to identify $\mathrm{Hom}_R(R,R)$ with $R$. Right multiplication by $r \in R$ is a left $R$-module map $R \to R$, and composition reverses the order of multiplication, giving $\mathrm{Hom}_R(R,R) \cong R^{\mathrm{op}}$ as rings. Hence
+\[
+  R^{\mathrm{op}} \cong M_{n_1}(D_1) \oplus \cdots \oplus M_{n_k}(D_k).
+\]
+Passing to opposite rings: the opposite of a direct sum is the direct sum of the opposites, $(M_n(D))^{\mathrm{op}} \cong M_n(D^{\mathrm{op}})$, and $D^{\mathrm{op}}$ is again a division ring. Relabelling $D_j^{\mathrm{op}}$ as $D_j$ gives $R \cong M_{n_1}(D_1) \oplus \cdots \oplus M_{n_k}(D_k)$.
+\end{proof}
 
 \begin{theorem}[7.11]
 Let $R$ be a left (or right) Artinian ring with unity and no non-zero nilpotent ideals. Then $R$ is also right and left Artinian, and right and left Noetherian.
