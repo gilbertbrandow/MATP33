@@ -1205,4 +1205,58 @@ Since each elementary matrix is invertible, any sequence of elementary row and c
 Two matrices $A, B \in M_{m \times n}(R)$ are \emph{equivalent} if there exist invertible matrices $P \in M_m(R)$ and $Q \in M_n(R)$ such that $B = PAQ$.
 \end{definition}
 
+\begin{theorem}[8.8 — Smith Normal Form]
+Let $A \in M_{m \times n}(R)$ where $R$ is a PID. Then $A$ is equivalent to a matrix of the form
+\[
+  \begin{pmatrix} a_1 & & & \\ & \ddots & & \\ & & a_r & \\ & & & 0 \end{pmatrix},
+\]
+where $a_1, \ldots, a_r \neq 0$ and $a_1 \mid a_2 \mid \cdots \mid a_r$.
+\end{theorem}
+
+\begin{proof}
+Define the \emph{length} $\ell(a)$ of a non-zero $a \in R$ to be the number of prime factors in the factorisation $a = p_1 \cdots p_k$ counted with multiplicity, with the convention $\ell(u) = 0$ for units.
+
+\textit{Step 1: bring a minimal-length entry to position $(1,1)$.}
+If $A = 0$ the result is immediate. Otherwise, among all non-zero entries pick $a_{ij}$ with minimal $\ell(a_{ij})$. Row and column swaps bring it to position $(1,1)$.
+
+\textit{Step 2: clear the first row.}
+Fix any column $k \geq 2$. If $a_{11} \mid a_{1k}$, write $a_{1k} = a_{11}q$ and apply $C_k - qC_1$, zeroing the $(1,k)$ entry without changing $a_{11}$. If $a_{11} \nmid a_{1k}$, let $d = \gcd(a_{11}, a_{1k})$ and write $a_{11} = ds$, $a_{1k} = dt$. By Bézout there exist $u, v \in R$ with $us + vt = 1$, so the matrix $\bigl(\begin{smallmatrix} u & t \\ v & -s \end{smallmatrix}\bigr)$ is invertible (determinant $-1$). Right-multiplying $A$ by the $n \times n$ matrix with this $2 \times 2$ block in the $(1,k)$-positions and the identity elsewhere replaces the $(1,1)$ entry by $a_{11}u + a_{1k}v = d$ and the $(1,k)$ entry by $a_{11}t - a_{1k}s = 0$. Since $d$ properly divides $a_{11}$, we have $\ell(d) < \ell(a_{11})$. Repeating across all columns clears the first row.
+
+\textit{Step 3: clear the first column.}
+The identical argument applied to rows (left-multiplying by the analogous block matrices) clears all entries below $(1,1)$.
+
+\textit{Step 4: termination.}
+Clearing the first column may reintroduce non-zero entries in the first row, requiring another pass of Step 2. However this only occurs when $a_{11}$ does not divide some first-column entry, which triggers the Bézout case and strictly reduces $\ell(a_{11})$. Since $\ell(a_{11}) \geq 0$ is a non-negative integer, the alternating process terminates after at most $\ell(a_{11})$ restarts, yielding
+\[
+  P_1 A Q_1 = \begin{pmatrix} a_1 & 0 & \cdots & 0 \\ 0 & & & \\ \vdots & & A_1 & \\ 0 & & & \end{pmatrix},
+\]
+where $A_1$ is an $(m-1)\times(n-1)$ submatrix.
+
+\textit{Step 5: induction.}
+Apply the same procedure to $A_1$ and continue. By induction on $m + n$ we obtain $PAQ = \mathrm{diag}(a_1, \ldots, a_r, 0, \ldots, 0)$.
+
+\textit{Step 6: enforce $a_1 \mid a_2 \mid \cdots \mid a_r$.}
+Suppose $a_1 \nmid a_2$. Add row 2 to row 1; the first row becomes $(a_1, a_2, 0, \ldots, 0)$. Applying Step 2 replaces $a_1$ by $\gcd(a_1, a_2)$, strictly reducing $\ell(a_1)$. Repeating forces $a_1 \mid a_2$, and similarly $a_1 \mid a_i$ for all $i$. Repeating the argument for $a_2$ in place of $a_1$, and so on, gives $a_i \mid a_{i+1}$ for all $i = 1, \ldots, r-1$.
+\end{proof}
+
+\begin{definition}[8.9 — Invariant factors]
+The non-zero diagonal entries $a_1, \ldots, a_r$ of the Smith normal form of $A$ are called the \emph{invariant factors} of $A$. They are unique up to unit multipliers, and two $m \times n$ matrices are equivalent if and only if they have the same invariant factors.
+\end{definition}
+
+\begin{theorem}[8.10]
+Let $A$ be an $m \times n$ matrix over a PID. Then the row rank of $A$ equals the column rank of $A$.
+\end{theorem}
+
+\begin{proof}
+Choose invertible $P$, $Q$ such that $PAQ$ is in Smith normal form (Theorem~8.8). By Theorem~8.3, multiplying by invertible matrices preserves row and column rank, so
+\[
+  \mathrm{row\ rank}(A) = \mathrm{row\ rank}(PAQ) = r = \mathrm{col\ rank}(PAQ) = \mathrm{col\ rank}(A),
+\]
+where $r$ is the number of non-zero diagonal entries.
+\end{proof}
+
+\begin{definition}[8.11 — Rank]
+The common value of the row rank and column rank of $A$ is called the \emph{rank} of $A$, denoted $\mathrm{rank}(A)$.
+\end{definition}
+
 \end{document}
