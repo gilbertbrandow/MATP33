@@ -1131,7 +1131,7 @@ By Schur's Lemma~5.6, any non-zero homomorphism between simple modules is an iso
   \mathrm{Hom}_R(R, R) \cong M_{n_1}(D_1) \oplus \cdots \oplus M_{n_k}(D_k).
 \]
 
-It remains to identify $\mathrm{Hom}_R(R,R)$ with $R$. Right multiplication by $r \in R$ is a left $R$-module map $R \to R$, and composition reverses the order of multiplication, giving $\mathrm{Hom}_R(R,R) \cong R^{\mathrm{op}}$ as rings. Hence
+It remains to identify $\mathrm{Hom}_R(R,R)$ with $R$. Every $\varphi \in \mathrm{Hom}_R(R,R)$ is determined by $b := \varphi(1)$, since $\varphi(r) = \varphi(r \cdot 1) = r\varphi(1) = rb$. So every endomorphism is right multiplication $\rho_b$ by some $b \in R$. However composition reverses order: $(\rho_b \circ \rho_c)(1) = \rho_b(c) = cb$, which is the product $b \cdot_{\mathrm{op}} c$ in $R^{\mathrm{op}}$. Hence $\mathrm{Hom}_R(R,R) \cong R^{\mathrm{op}}$ as rings, giving
 \[
   R^{\mathrm{op}} \cong M_{n_1}(D_1) \oplus \cdots \oplus M_{n_k}(D_k).
 \]
