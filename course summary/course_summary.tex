@@ -1259,4 +1259,73 @@ where $r$ is the number of non-zero diagonal entries.
 The common value of the row rank and column rank of $A$ is called the \emph{rank} of $A$, denoted $\mathrm{rank}(A)$.
 \end{definition}
 
+\section*{Lecture 12 — Finitely Generated Modules over a PID}
+
+\begin{theorem}[9.1 — Decomposition Theorem]
+Let $R$ be a principal ideal domain, and let $M$ be a finitely generated $R$-module. Then
+\[
+  M \cong R^s \oplus R/Ra_1 \oplus \cdots \oplus R/Ra_r,
+\]
+where $s, r \in \mathbb{N} \cup \{0\}$, the $a_i$ are non-zero non-units in $R$, and $a_i \mid a_{i+1}$ for $i = 1, \ldots, r-1$.
+\end{theorem}
+
+\begin{proof}
+Since $M$ is finitely generated, by Lemma 5.24 there is a surjective $R$-homomorphism $\phi_0 : R^n \to M$, so $M \cong R^n/K$ where $K = \ker \phi_0$. Since $K$ is a submodule of the free module $R^n$, by Lemma 5.25 $K$ is free of rank $m \leq n$. Let $\phi : R^m \xrightarrow{\sim} K$ be an isomorphism and $\{e_1, \ldots, e_m\}$ the standard basis of $R^m$. Writing $\phi(e_j) = (a_{1j}, \ldots, a_{nj})^\top \in R^n$, the map $\phi$ is left-multiplication by the matrix $A = (a_{ij}) \in M_{n \times m}(R)$, so $K = AR^m$.
+
+By Theorem 8.8 (Smith Normal Form), there exist invertible $P \in M_n(R)$ and $Q \in M_m(R)$ such that $PAQ = \mathrm{diag}(a_1, \ldots, a_k, 0, \ldots, 0)$ with $a_1 \mid \cdots \mid a_k$. Since $Q$ is invertible, $\{Qv \mid v \in R^m\} = R^m$, so $AR^m = AQR^m$. Left-multiplication by the invertible $P$ is an automorphism of $R^n$ sending $K = AQR^m$ to $P(AQR^m) = PAQR^m$, so $R^n/K \cong R^n/PAQR^m$. Therefore
+\[
+  M \cong \frac{R^n}{PAQR^m} \cong \frac{R}{Ra_1} \oplus \cdots \oplus \frac{R}{Ra_k} \oplus R^{n-k},
+\]
+where the last isomorphism is by Theorem 4.33, using that the image of $R^m$ under $\mathrm{diag}(a_1,\ldots,a_k,0,\ldots,0)$ is $Ra_1 \oplus \cdots \oplus Ra_k \oplus 0 \oplus \cdots \oplus 0 \subseteq R^n$. Deleting the zero summands (those where $a_i$ is a unit, giving $R/Ra_i = 0$), renaming the remaining non-unit diagonal entries $a_1, \ldots, a_r$, and setting $s = n - k$ gives
+\[
+  M \cong \frac{R}{Ra_1} \oplus \cdots \oplus \frac{R}{Ra_r} \oplus R^s. \qedhere
+\]
+\end{proof}
+
+\begin{definition}[9.2 — Torsion element]
+Let $R$ be a principal ideal domain and $M$ an $R$-module. An element $x \in M$ is called a \emph{torsion element} if there exists a non-zero $r \in R$ such that $rx = 0$.
+\end{definition}
+
+\begin{definition}[9.4 — Torsion-free element]
+Let $R$ be a principal ideal domain and $M$ an $R$-module. A non-zero element $x \in M$ is called a \emph{torsion-free element} if $rx = 0$ for $r \in R$ implies $r = 0$.
+\end{definition}
+
+\begin{theorem}[9.6]
+Let $R$ be a principal ideal domain and $M$ an $R$-module. Then
+\[
+  \mathrm{Tor}\, M := \{x \in M \mid x \text{ is a torsion element}\}
+\]
+is a submodule of $M$.
+\end{theorem}
+
+\begin{proof}
+We verify the three conditions of Definition 4.8.
+
+\textit{Non-empty.} For any non-zero $r \in R$, $r \cdot 0 = 0$, so $0 \in \mathrm{Tor}\, M$.
+
+\textit{Closed under subtraction.} Let $x, y \in \mathrm{Tor}\, M$, say $rx = 0$ and $sy = 0$ for non-zero $r, s \in R$. Then
+\[
+  rs(x - y) = s(rx) - r(sy) = 0.
+\]
+Since $R$ is a PID it is an integral domain, so $rs \neq 0$, hence $x - y \in \mathrm{Tor}\, M$.
+
+\textit{Closed under scalar multiplication.} Let $x \in \mathrm{Tor}\, M$ with $rx = 0$ for some non-zero $r \in R$, and let $a \in R$. Then $r(ax) = a(rx) = 0$, so $ax \in \mathrm{Tor}\, M$.
+\end{proof}
+
+\begin{theorem}[9.7]
+Let $M$ be a finitely generated module over a principal ideal domain $R$. Then
+\[
+  M = F \oplus \mathrm{Tor}\, M,
+\]
+where $F \cong R^s$ for some non-negative integer $s$, and $\mathrm{Tor}\, M \cong R/Ra_1 \oplus \cdots \oplus R/Ra_r$ with the $a_i$ non-zero non-units satisfying $a_1 \mid \cdots \mid a_r$.
+\end{theorem}
+
+\begin{proof}
+By Theorem 9.1, $M \cong R^s \oplus R/Ra_1 \oplus \cdots \oplus R/Ra_r$. Set $F \cong R^s$ and $T \cong R/Ra_1 \oplus \cdots \oplus R/Ra_r$, so $M = F \oplus T$. We show $T = \mathrm{Tor}\, M$.
+
+\textit{$T \subseteq \mathrm{Tor}\, M$.} Since $a_1 \mid a_2 \mid \cdots \mid a_r$, we have $a_r \in Ra_i$ for each $i$, so $a_r$ annihilates every summand $R/Ra_i$. Hence $a_r T = 0$, meaning every element of $T$ is torsion, so $T \subseteq \mathrm{Tor}\, M$.
+
+\textit{$\mathrm{Tor}\, M \subseteq T$.} Let $x \in \mathrm{Tor}\, M$ and write $x = x_1 + x_2$ with $x_1 \in F$ and $x_2 \in T$. Since $T \subseteq \mathrm{Tor}\, M$, the element $x_2$ is torsion, and therefore so is $x_1 = x - x_2$. Say $rx_1 = 0$ for some non-zero $r \in R$. Under the isomorphism $F \cong R^s$, $x_1$ corresponds to some $(y_1, \ldots, y_s) \in R^s$, and $r(y_1, \ldots, y_s) = 0$ gives $ry_i = 0$ for each $i$. Since $R$ is an integral domain and $r \neq 0$, each $y_i = 0$, so $x_1 = 0$. Thus $x = x_2 \in T$.
+\end{proof}
+
 \end{document}
