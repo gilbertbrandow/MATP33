@@ -44,21 +44,21 @@ The weekly sections below reproduce the official course programme. References to
 
 ## Week 41 (5-11 October 2026)
 
-- [ ] Lecture: [Wedderburn-Artin Theorem](lectures/Lecture%2011.pdf) (5 October; optional reading: [B], Sections 19.3-19.3.6)
-- [ ] Exercises: [Exercise Sheet 11](exercises/Exercise%2011.pdf)
-- [ ] Lecture: [Smith normal form over a PID](lectures/Lecture%2012.pdf) (8 October; optional reading: [B], Chapter 20)
-- [ ] Exercises: [Exercise Sheet 12](exercises/Exercise%2012.pdf)
+- [x] Lecture: [Wedderburn-Artin Theorem](lectures/Lecture%2011.pdf) (5 October; optional reading: [B], Sections 19.3-19.3.6)
+- [x] Exercises: [Exercise Sheet 11](exercises/Exercise%2011.pdf)
+- [x] Lecture: [Smith normal form over a PID](lectures/Lecture%2012.pdf) (8 October; optional reading: [B], Chapter 20)
+- [x] Exercises: [Exercise Sheet 12](exercises/Exercise%2012.pdf)
 
 ## Week 42 (12-18 October 2026)
 
-- [ ] Lecture: [Finitely generated modules over a PID](lectures/Lecture%2013.pdf) (12 October; optional reading: [B], Sections 21.1-21.3)
-- [ ] Exercises: [Exercise Sheet 13](exercises/Exercise%2013.pdf)
-- [ ] Lecture: [Rational canonical form and tensor products](lectures/Lecture%2014.pdf) (15 October; optional reading: [B], Sections 21.4 and 22.2)
-- [ ] Exercises: [Exercise Sheet 14](exercises/Exercise%2014.pdf)
+- [x] Lecture: [Finitely generated modules over a PID](lectures/Lecture%2013.pdf) (12 October; optional reading: [B], Sections 21.1-21.3)
+- [x] Exercises: [Exercise Sheet 13](exercises/Exercise%2013.pdf)
+- [x] Lecture: [Rational canonical form and tensor products](lectures/Lecture%2014.pdf) (15 October; optional reading: [B], Sections 21.4 and 22.2)
+- [x] Exercises: [Exercise Sheet 14](exercises/Exercise%2014.pdf)
 
 ## Week 43 (19-25 October 2026)
 
-- [ ] Lecture: [Module structure of the tensor product](lectures/Lecture%2015.pdf) (19 October; optional reading: [B], Sections 22.3-22.4)
+- [x] Lecture: [Module structure of the tensor product](lectures/Lecture%2015.pdf) (19 October; optional reading: [B], Sections 22.3-22.4)
 - [ ] Exercises: [Exercise Sheet 15](exercises/Exercise%2015.pdf)
 - [ ] Seminar: Discuss [Exercise Sheet 13](exercises/Exercise%2013.pdf), [Exercise Sheet 14](exercises/Exercise%2014.pdf), and [Exercise Sheet 15](exercises/Exercise%2015.pdf) (22 October)
 - [ ] Seminar: Revision session 1 - discuss the [August 2023 written exam](exams/MATP33-2023-08-15.pdf) and [November 2024 written exam](exams/GRT_ResitExam_2024-11-30.pdf) (23 October)
@@ -86,7 +86,7 @@ The weekly sections below reproduce the official course programme. References to
 - [x] Proof Theorem 5.9
 - [x] Exercise 6.2
 - [x] Exercise 6.5
-- [ ] Exercise 7.6 (?)
+- [ ] Exercise 7.6
 - [ ] Proof 5.19
 - [x] Almost all proofs Lecture 7-8
 - [ ] Theorem 6.5 from Lecture 8
@@ -96,4 +96,7 @@ The weekly sections below reproduce the official course programme. References to
 - [ ] Extra questions exercises 9
 - [ ] Exercises 10.3
 - [ ] Extra questions exercises 10
+- [ ] Exercise 11.4
+- [ ] Exercise 11.5
 - [ ] Theorem 10.8
+- [ ] Exercise 14.4
