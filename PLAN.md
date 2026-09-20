@@ -96,3 +96,4 @@ The weekly sections below reproduce the official course programme. References to
 - [ ] Extra questions exercises 9
 - [ ] Exercises 10.3
 - [ ] Extra questions exercises 10
+- [ ] Theorem 10.8
