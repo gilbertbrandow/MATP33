@@ -1328,4 +1328,62 @@ By Theorem 9.1, $M \cong R^s \oplus R/Ra_1 \oplus \cdots \oplus R/Ra_r$. Set $F 
 \textit{$\mathrm{Tor}\, M \subseteq T$.} Let $x \in \mathrm{Tor}\, M$ and write $x = x_1 + x_2$ with $x_1 \in F$ and $x_2 \in T$. Since $T \subseteq \mathrm{Tor}\, M$, the element $x_2$ is torsion, and therefore so is $x_1 = x - x_2$. Say $rx_1 = 0$ for some non-zero $r \in R$. Under the isomorphism $F \cong R^s$, $x_1$ corresponds to some $(y_1, \ldots, y_s) \in R^s$, and $r(y_1, \ldots, y_s) = 0$ gives $ry_i = 0$ for each $i$. Since $R$ is an integral domain and $r \neq 0$, each $y_i = 0$, so $x_1 = 0$. Thus $x = x_2 \in T$.
 \end{proof}
 
+\begin{theorem}[9.8]
+Let $R$ be a principal ideal domain. Then any non-zero ideal $P \neq R$ is prime if and only if it is maximal.
+\end{theorem}
+
+\begin{proof}
+$(\Leftarrow)$ Every maximal ideal is prime by Theorem 6.21.
+
+$(\Rightarrow)$ Let $P = (a)$ be a non-zero prime ideal. Suppose for a contradiction that $P$ is not maximal, so there exists an ideal $M$ with $P \subsetneq M \subsetneq R$. Since $R$ is a PID, $M = (b)$ for some $b \in R$. Then $(a) \subseteq (b)$ implies $a = bx$ for some $x \in R$. Since $b \notin (a)$ and $(a)$ is prime, the relation $a = bx \in (a)$ forces $x \in (a)$, say $x = ay$ for some $y \in R$. Then $a = bx = bay$, and since $R$ is an integral domain and $a \neq 0$, we may cancel to get $1 = by$. But then $b$ is a unit, so $M = (b) = R$, a contradiction.
+\end{proof}
+
+\begin{corollary}
+Let $R$ be a principal ideal domain and $P$ a non-zero prime ideal. Then $R/P$ is a field.
+\end{corollary}
+
+\begin{proof}
+Since $P$ is a non-zero prime ideal in the PID $R$, Theorem 9.8 gives that $P$ is maximal. It remains to show $R/P$ is a field, i.e.\ that every non-zero element $a + P \in R/P$ is invertible. Since $a \notin P$, the ideal $Ra + P$ strictly contains $P$. As $P$ is maximal, $Ra + P = R$, so there exist $r \in R$ and $p \in P$ with $ra + p = 1$. Then $(r + P)(a + P) = ra + P = 1 + P$, so $a + P$ is invertible.
+\end{proof}
+
+\begin{theorem}[9.9 — Uniqueness of Decomposition]
+Let $R$ be a principal ideal domain and $M$ a finitely generated $R$-module. Suppose
+\[
+  M \cong R^s \oplus R/Ra_1 \oplus \cdots \oplus R/Ra_u \quad \text{and} \quad M \cong R^t \oplus R/Rb_1 \oplus \cdots \oplus R/Rb_v,
+\]
+where the $a_i$ and $b_j$ are non-zero non-units with $a_1 \mid \cdots \mid a_u$ and $b_1 \mid \cdots \mid b_v$. Then $s = t$, $u = v$, and $Ra_i = Rb_i$ for all $i$.
+\end{theorem}
+
+\begin{proof}
+\textit{Step 1: $s = t$.} By Theorem 9.7, both decompositions yield $M = F \oplus \mathrm{Tor}\,M$ with $F \cong R^s$ and $F' \cong R^t$ respectively. Then
+\[
+  R^s \cong F \cong M/\mathrm{Tor}\,M \cong F' \cong R^t,
+\]
+so $s = t$ by Theorem 5.21. Let $T = \mathrm{Tor}\,M$; it remains to show $u = v$ and $Ra_i = Rb_i$.
+
+\textit{Step 2: $u = v$.} For an $R$-module $X$ and a prime $p \in R$, define $X_p := \{x \in X \mid px = 0\}$. By the corollary to Theorem 9.8, $R/Rp$ is a field, so $T_p$ is a vector space over $R/Rp$. From the first decomposition of $T$,
+\[
+  \left(\frac{R}{Ra_i}\right)_p = \begin{cases} R/Rp & \text{if } p \mid a_i, \\ 0 & \text{if } p \nmid a_i, \end{cases}
+\]
+so $\dim_{R/Rp}(T_p)$ equals the number of $a_i$ divisible by $p$. Now choose a prime $p$ dividing $a_1$; since $a_1 \mid a_i$ for all $i$, $p$ divides every $a_i$, giving $\dim_{R/Rp}(T_p) = u$. Applying the same reasoning to the second decomposition, the dimension also equals the number of $b_j$ divisible by $p$, which is at most $v$, so $u \leq v$. By symmetry (choosing a prime dividing $b_1$), $v \leq u$, hence $u = v$.
+
+\textit{Step 3: $Ra_u = Rb_u$.} Since $a_i \mid a_u$ for all $i$, the element $a_u$ annihilates every summand in the first decomposition, so $a_u T = 0$. Applied to the second decomposition, $a_u \cdot (R/Rb_u) = 0$, which means $a_u \in Rb_u$, so $Ra_u \subseteq Rb_u$. By symmetry $Rb_u \subseteq Ra_u$, hence $Ra_u = Rb_u$.
+
+\textit{The remainder of the proof is non-examinable.} It remains to show $Ra_i = Rb_i$ for $i < u$ by downward induction on $i$. The idea is: assuming $Ra_i = Rb_i$ for $k \leq i \leq u$, one multiplies both decompositions of $T$ by a carefully chosen element $x \in R$ built from a prime $p$ and the exact $p$-adic valuation of $a_u$. This zeros out the first $k-1$ summands in one decomposition but not the other, producing two decompositions of $xT$ with a different number of non-zero summands — contradicting the fact (established by the dimension argument in Step 2) that any two such decompositions must have equally many non-zero summands.
+\end{proof}
+
+\begin{theorem}[9.10 — Fundamental Theorem of Finitely Generated Abelian Groups]
+Let $A$ be a finitely generated abelian group. Then
+\[
+  A \cong \mathbb{Z}^s \oplus \mathbb{Z}/a_1\mathbb{Z} \oplus \cdots \oplus \mathbb{Z}/a_r\mathbb{Z},
+\]
+where $s \geq 0$, the $a_i$ are non-zero non-units in $\mathbb{Z}$, and $a_1 \mid a_2 \mid \cdots \mid a_r$. This decomposition is unique.
+\end{theorem}
+
+\begin{proof}
+Every abelian group is a $\mathbb{Z}$-module (with $n \cdot a$ meaning $a + \cdots + a$ or its inverse), and $\mathbb{Z}$ is a PID. So Theorem 9.1 applies directly with $R = \mathbb{Z}$, giving a decomposition $A \cong \mathbb{Z}^s \oplus \mathbb{Z}/a_1\mathbb{Z} \oplus \cdots \oplus \mathbb{Z}/a_r\mathbb{Z}$ where each $\mathbb{Z}/a_i\mathbb{Z} = R/Ra_i$ is a cyclic torsion summand. Uniqueness of $s$ and of the ideals $\mathbb{Z}a_i$ (hence the $a_i$ up to sign) then follows from Theorem 9.9.
+
+If $A$ is finite, then $s = 0$: the summand $\mathbb{Z}^s$ contains elements of infinite order whenever $s \geq 1$, but a finite group has no such elements.
+\end{proof}
+
 \end{document}
