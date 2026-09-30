@@ -86,7 +86,7 @@ The weekly sections below reproduce the official course programme. References to
 - [x] Proof Theorem 5.9
 - [x] Exercise 6.2
 - [x] Exercise 6.5
-- [ ] Exercise 7.6
+- [x] Exercise 7.6
 - [ ] Proof 5.19
 - [x] Almost all proofs Lecture 7-8
 - [ ] Theorem 6.5 from Lecture 8
@@ -100,3 +100,5 @@ The weekly sections below reproduce the official course programme. References to
 - [ ] Exercise 11.5
 - [ ] Theorem 10.8
 - [ ] Exercise 14.4
+- [ ] Theorem 21 (4.30)
+- [ ] Theorem 32 (5.21)
