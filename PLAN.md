@@ -87,13 +87,13 @@ The weekly sections below reproduce the official course programme. References to
 - [x] Exercise 6.2
 - [x] Exercise 6.5
 - [x] Exercise 7.6
-- [ ] Proof 5.19
+- [x] Proof 5.19
 - [x] Almost all proofs Lecture 7-8
-- [ ] Theorem 6.5 from Lecture 8
+- [/] Theorem 6.5 from Lecture 8
 - [x] Exercise 8.1
 - [x] Exercise 8.3
 - [x] Proof of Hilberts basis theorem (6.23)
-- [ ] Extra questions exercises 9
+- [/] Extra questions exercises 9 (Missing 9.7)
 - [ ] Exercises 10.3
 - [ ] Extra questions exercises 10
 - [ ] Exercise 11.4
@@ -103,3 +103,4 @@ The weekly sections below reproduce the official course programme. References to
 - [ ] Theorem 21 (4.30)
 - [ ] Theorem 32 (5.21)
 - [ ] Theorem 36 (6.10)
+- [ ] Theorem 40 (6.23)
