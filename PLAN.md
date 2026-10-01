@@ -102,3 +102,4 @@ The weekly sections below reproduce the official course programme. References to
 - [ ] Exercise 14.4
 - [ ] Theorem 21 (4.30)
 - [ ] Theorem 32 (5.21)
+- [ ] Theorem 36 (6.10)

@@ -700,7 +700,7 @@ Let $M$ be a free $R$-module with basis $\{f_1, \ldots, f_n\}$. Then $M \cong R^
 \end{theorem}
 
 \begin{proof}
-Define $\varphi : M \to R^n$ by $\varphi\!\left(\sum_{i=1}^n r_i f_i\right) = (r_1, \ldots, r_n)$, i.e.\ read off the coordinates in the basis. Since every element of $M$ has a \emph{unique} representation as $\sum r_i f_i$ (by linear independence of the $f_i$), $\varphi$ is well-defined. It is clearly an $R$-homomorphism, injective (if $(r_1,\ldots,r_n) = 0$ then each $r_i = 0$, so $m = 0$), and surjective (every $(r_1,\ldots,r_n) \in R^n$ is the image of $\sum r_i f_i$).
+Define $\varphi : M \to R^n$ by $\varphi\!\left(\sum_{i=1}^n r_i f_i\right) = (r_1, \ldots, r_n)$, i.e.\ read off the coordinates in the basis. Since every element of $M$ has a \emph{unique} representation as $\sum r_i f_i$ (by linear independence of the $f_i$), $\varphi$ is well-defined. It is an $R$-homomorphism: $\varphi\!\left(r\cdot\sum s_i f_i\right) = \varphi\!\left(\sum (rs_i)f_i\right) = (rs_1,\ldots,rs_n) = r\cdot(s_1,\ldots,s_n) = r\cdot\varphi\!\left(\sum s_i f_i\right)$, where the last scalar multiplication is coordinate-wise in $R^n$. It is injective (if $(r_1,\ldots,r_n) = 0$ then each $r_i = 0$, so $m = 0$), and surjective (every $(r_1,\ldots,r_n) \in R^n$ is the image of $\sum r_i f_i$).
 \end{proof}
 
 \begin{theorem}[5.20]
@@ -850,11 +850,23 @@ Since $N \cap K$ is a submodule of $N$ and $N$ is Noetherian, $N \cap K$ is fini
 \]
 so $K$ is finitely generated and $M$ is Noetherian.
 
-\textit{Artinian case.} Assume $N$ and $M/N$ are Artinian. Let $M \supseteq K_1 \supseteq K_2 \supseteq \cdots$ be a descending chain in $M$. The induced chains
+\textit{Artinian case.} Assume $N$ and $M/N$ are Artinian. Let $M \supseteq K_1 \supseteq K_2 \supseteq \cdots$ be a descending chain in $M$. Consider the two induced chains
 \[
-  K_1 \cap N \supseteq K_2 \cap N \supseteq \cdots \quad \text{in } N, \qquad \frac{K_1 + N}{N} \supseteq \frac{K_2 + N}{N} \supseteq \cdots \quad \text{in } M/N
+  K_1 \cap N \supseteq K_2 \cap N \supseteq \cdots \quad \text{in } N, \qquad \frac{K_1 + N}{N} \supseteq \frac{K_2 + N}{N} \supseteq \cdots \quad \text{in } M/N.
 \]
-both stabilise (since $N$ and $M/N$ are Artinian), say at indices $n$ and $m$ respectively. Set $q = \max\{m, n\}$. For $i \geq q$ we have $K_i \cap N = K_q \cap N$ and $K_i + N = K_q + N$. One can then show using the Second Isomorphism Theorem that $K_i = K_q$, so the original chain stabilises and $M$ is Artinian.
+Both stabilise (since $N$ and $M/N$ are Artinian), say $K_i \cap N = K_p \cap N$ for all $i \geq p$, and $(K_i+N)/N = (K_s+N)/N$ (i.e.\ $K_i + N = K_s + N$) for all $i \geq s$. Set $q = \max\{p, s\}$. Then for all $i \geq q$:
+\[
+  K_i \cap N = K_q \cap N \quad \text{and} \quad K_i + N = K_q + N.
+\]
+We claim $K_i = K_q$. Since the chain is descending and $i \geq q$, we already have $K_i \subseteq K_q$. For the reverse inclusion, take any $x \in K_q$. By the Second Isomorphism Theorem applied to $K_q$ and $N$:
+\[
+  K_q/(K_q \cap N) \cong (K_q + N)/N.
+\]
+In concrete terms, since $K_q + N = K_i + N$, every element of $K_q$ can be written as an element of $K_i$ plus an element of $N$: there exist $y \in K_i$ and $n \in N$ such that $x = y + n$. Then
+\[
+  n = x - y \in K_q,
+\]
+because $x \in K_q$ and $y \in K_i \subseteq K_q$. Hence $n \in K_q \cap N = K_i \cap N \subseteq K_i$. Therefore $x = y + n \in K_i$, giving $K_q \subseteq K_i$ and thus $K_i = K_q$. The original chain stabilises, so $M$ is Artinian.
 \end{proof}
 
 
