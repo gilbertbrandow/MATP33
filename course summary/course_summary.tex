@@ -618,11 +618,26 @@ By the First Isomorphism Theorem, $(M/U)/(V/U) \cong M/V$.
 \end{proof}
 
 \begin{theorem}[4.33]
-Let $A \leq M$ and $B \leq N$ be $R$-submodules. Then $(M \times N)/(A \times B) \cong M/A \times N/B$.
+Let $M_1, \ldots, M_n$ be $R$-modules and $A_i \leq M_i$ an $R$-submodule for each $i$. Then
+\[
+  \frac{M_1 \times \cdots \times M_n}{A_1 \times \cdots \times A_n} \cong \frac{M_1}{A_1} \times \cdots \times \frac{M_n}{A_n}.
+\]
+Since the product is finite, $\times$ and $\oplus$ agree here, so equivalently $(M_1 \oplus \cdots \oplus M_n)/(A_1 \oplus \cdots \oplus A_n) \cong M_1/A_1 \oplus \cdots \oplus M_n/A_n$.
 \end{theorem}
 
 \begin{proof}
-Define $f : M \times N \to M/A \times N/B$ by $f(m,n) = (m+A,\, n+B)$. This is a surjective $R$-homomorphism, and $\ker f = \{(m,n) \mid m \in A,\, n \in B\} = A \times B$. By the First Isomorphism Theorem, $(M \times N)/(A \times B) \cong M/A \times N/B$.
+Define $f : M_1 \times \cdots \times M_n \to M_1/A_1 \times \cdots \times M_n/A_n$ by
+\[
+  f(m_1, \ldots, m_n) = (m_1 + A_1, \ldots, m_n + A_n).
+\]
+
+\textit{$f$ is an $R$-homomorphism.} Each coordinate is the quotient map $\pi_i : M_i \to M_i/A_i$, and operations in a product are coordinatewise, so $f$ respects addition and scalar multiplication because each $\pi_i$ does.
+
+\textit{$f$ is surjective.} Any element of the target is $(m_1 + A_1, \ldots, m_n + A_n)$ for some $m_i \in M_i$, and this equals $f(m_1, \ldots, m_n)$.
+
+\textit{$\ker f = A_1 \times \cdots \times A_n$.} We have $f(m_1, \ldots, m_n) = 0$ iff $m_i + A_i = A_i$ for every $i$, iff $m_i \in A_i$ for every $i$.
+
+By the First Isomorphism Theorem, $(M_1 \times \cdots \times M_n)/(A_1 \times \cdots \times A_n) \cong M_1/A_1 \times \cdots \times M_n/A_n$.
 \end{proof}
 
 \section*{Lecture 6 — Simple, Completely Reducible, and Free Modules}
@@ -1322,7 +1337,15 @@ By Theorem 8.8 (Smith Normal Form), there exist invertible $P \in M_n(R)$ and $Q
 \[
   M \cong \frac{R^n}{PAQR^m} \cong \frac{R}{Ra_1} \oplus \cdots \oplus \frac{R}{Ra_k} \oplus R^{n-k},
 \]
-where the last isomorphism is by Theorem 4.33, using that the image of $R^m$ under $\mathrm{diag}(a_1,\ldots,a_k,0,\ldots,0)$ is $Ra_1 \oplus \cdots \oplus Ra_k \oplus 0 \oplus \cdots \oplus 0 \subseteq R^n$. Deleting the zero summands (those where $a_i$ is a unit, giving $R/Ra_i = 0$), renaming the remaining non-unit diagonal entries $a_1, \ldots, a_r$, and setting $s = n - k$ gives
+where the last isomorphism is justified as follows. Left-multiplying $v = (v_1, \ldots, v_m)^\top \in R^m$ by $D = \mathrm{diag}(a_1,\ldots,a_k,0,\ldots,0) \in M_{n \times m}(R)$ gives $(a_1 v_1, \ldots, a_k v_k, 0, \ldots, 0)^\top \in R^n$, and as $v$ ranges over $R^m$ each $a_i v_i$ ranges independently over $Ra_i$. Hence
+\[
+  PAQR^m = DR^m = Ra_1 \oplus \cdots \oplus Ra_k \oplus \underbrace{0 \oplus \cdots \oplus 0}_{n-k}.
+\]
+Now apply Theorem 4.33 with $n$ factors, taking $M_i = R$ for every $i$, $A_i = Ra_i$ for $i \leq k$, and $A_i = 0$ for $i > k$:
+\[
+  \frac{R^n}{PAQR^m} = \frac{R \oplus \cdots \oplus R}{Ra_1 \oplus \cdots \oplus Ra_k \oplus 0 \oplus \cdots \oplus 0} \cong \frac{R}{Ra_1} \oplus \cdots \oplus \frac{R}{Ra_k} \oplus \underbrace{\frac{R}{0} \oplus \cdots \oplus \frac{R}{0}}_{n-k},
+\]
+and $R/0 \cong R$, so the last $n-k$ summands give $R^{n-k}$. Deleting the zero summands (those where $a_i$ is a unit, giving $R/Ra_i = 0$), renaming the remaining non-unit diagonal entries $a_1, \ldots, a_r$, and setting $s = n - k$ gives
 \[
   M \cong \frac{R}{Ra_1} \oplus \cdots \oplus \frac{R}{Ra_r} \oplus R^s. \qedhere
 \]
@@ -1369,7 +1392,21 @@ where $F \cong R^s$ for some non-negative integer $s$, and $\mathrm{Tor}\, M \co
 \begin{proof}
 By Theorem 9.1, $M \cong R^s \oplus R/Ra_1 \oplus \cdots \oplus R/Ra_r$. Set $F \cong R^s$ and $T \cong R/Ra_1 \oplus \cdots \oplus R/Ra_r$, so $M = F \oplus T$. We show $T = \mathrm{Tor}\, M$.
 
-\textit{$T \subseteq \mathrm{Tor}\, M$.} Since $a_1 \mid a_2 \mid \cdots \mid a_r$, we have $a_r \in Ra_i$ for each $i$, so $a_r$ annihilates every summand $R/Ra_i$. Hence $a_r T = 0$, meaning every element of $T$ is torsion, so $T \subseteq \mathrm{Tor}\, M$.
+\textit{$T \subseteq \mathrm{Tor}\, M$.} We say $c \in R$ \emph{annihilates} a module $N$ if $cy = 0$ for every $y \in N$, i.e.\ multiplying by $c$ sends everything in $N$ to zero. We show that the single non-zero element $a_r$ annihilates $T$, which makes every element of $T$ torsion.
+
+\textit{Step 1: $a_r \in Ra_i$ for each $i$.} Since $a_1 \mid a_2 \mid \cdots \mid a_r$, each $a_i$ divides $a_r$, i.e.\ $a_r = q_i a_i$ for some $q_i \in R$. Hence $a_r \in Ra_i$.
+
+\textit{Step 2: $a_r$ annihilates each summand $R/Ra_i$.} An element of $R/Ra_i$ is a coset $y + Ra_i$ with $y \in R$, and
+\[
+  a_r(y + Ra_i) = a_r y + Ra_i = y q_i a_i + Ra_i = Ra_i,
+\]
+since $yq_ia_i \in Ra_i$ ($R$ is commutative). The coset $Ra_i$ is the zero element of $R/Ra_i$, so $a_r(y + Ra_i) = 0$.
+
+\textit{Step 3: $a_r$ annihilates $T$.} An element of $T$ is a tuple $t = (t_1, \ldots, t_r)$ with $t_i \in R/Ra_i$. Scalar multiplication acts coordinatewise, so by Step 2
+\[
+  a_r t = (a_r t_1, \ldots, a_r t_r) = (0, \ldots, 0) = 0.
+\]
+Since $a_r \neq 0$, every $t \in T$ is a torsion element, so $T \subseteq \mathrm{Tor}\, M$.
 
 \textit{$\mathrm{Tor}\, M \subseteq T$.} Let $x \in \mathrm{Tor}\, M$ and write $x = x_1 + x_2$ with $x_1 \in F$ and $x_2 \in T$. Since $T \subseteq \mathrm{Tor}\, M$, the element $x_2$ is torsion, and therefore so is $x_1 = x - x_2$. Say $rx_1 = 0$ for some non-zero $r \in R$. Under the isomorphism $F \cong R^s$, $x_1$ corresponds to some $(y_1, \ldots, y_s) \in R^s$, and $r(y_1, \ldots, y_s) = 0$ gives $ry_i = 0$ for each $i$. Since $R$ is an integral domain and $r \neq 0$, each $y_i = 0$, so $x_1 = 0$. Thus $x = x_2 \in T$.
 \end{proof}
@@ -1449,7 +1486,10 @@ Let $T \in \mathrm{Hom}_F(V,V)$, and let $f_1(x), \ldots, f_n(x)$ be the invaria
 \]
 \end{theorem}
 
-\noindent\textit{(Proof non-examinable.)} The key steps are: define the surjective $F[x]$-homomorphism $\phi: F[x]^n \to V$ by $e_i \mapsto v_i$, then show $\ker \phi = (A - xI)F[x]^n$, giving $V \cong F[x]^n / (A-xI)F[x]^n$. Since invertible changes of basis preserve this quotient up to isomorphism, one may apply Smith Normal Form (Theorem 8.8) to put $A - xI$ in diagonal form $\mathrm{diag}(f_1(x), \ldots, f_n(x))$, after which Theorem 4.33 gives the direct sum decomposition.
+\noindent\textit{(Proof non-examinable.)} The key steps are: define the surjective $F[x]$-homomorphism $\phi: F[x]^n \to V$ by $e_i \mapsto v_i$, then show $\ker \phi = (A - xI)F[x]^n$, giving $V \cong F[x]^n / (A-xI)F[x]^n$. Since invertible changes of basis preserve this quotient up to isomorphism, one may apply Smith Normal Form (Theorem 8.8) to put $A - xI$ in diagonal form $\mathrm{diag}(f_1(x), \ldots, f_n(x))$. The image of $F[x]^n$ under this diagonal matrix is $(f_1(x)) \oplus \cdots \oplus (f_n(x))$, so Theorem 4.33 with $M_i = F[x]$ and $A_i = (f_i(x))$ for every $i$ gives
+\[
+  V \cong \frac{F[x] \oplus \cdots \oplus F[x]}{(f_1(x)) \oplus \cdots \oplus (f_n(x))} \cong \frac{F[x]}{(f_1(x))} \oplus \cdots \oplus \frac{F[x]}{(f_n(x))}.
+\]
 
 \begin{remark}[10.2]
 The polynomials $f_1(x), \ldots, f_n(x)$ are called the \emph{invariant factors} of $A$ (or of $T$). After discarding any unit factors, the remaining non-unit invariant factors are called the invariant factors of the $F[x]$-module $V$.

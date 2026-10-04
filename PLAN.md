@@ -94,7 +94,7 @@ The weekly sections below reproduce the official course programme. References to
 - [x] Exercise 8.3
 - [x] Proof of Hilberts basis theorem (6.23)
 - [/] Extra questions exercises 9 (Missing 9.7)
-- [ ] Exercises 10.3
+- [ ] Exercise 10.3
 - [ ] Extra questions exercises 10
 - [ ] Exercise 11.4
 - [ ] Exercise 11.5
@@ -104,3 +104,8 @@ The weekly sections below reproduce the official course programme. References to
 - [ ] Theorem 32 (5.21)
 - [ ] Theorem 36 (6.10)
 - [ ] Theorem 40 (6.23)
+- [ ] Theorem 49 (8.8)
+- [ ] Theorem 51 (9.1)
+- [ ] Theorem 55 (9.9)
+- [ ] Theorem 58 (10.4)
+- [ ] Theorem 59 (10.6)
