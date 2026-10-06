@@ -109,3 +109,109 @@ The weekly sections below reproduce the official course programme. References to
 - [ ] Theorem 55 (9.9)
 - [ ] Theorem 58 (10.4)
 - [ ] Theorem 59 (10.6)
+
+## Most important results
+
+This is an oral-exam priority subset, not a replacement for the full syllabus. All examinable definitions and theorem statements still need to be known. The purpose of these clusters is to identify the proof chains and major results that deserve extra time.
+
+The estimated oral priority below is a study judgement based on the lecturer's description of the oral exam: significant results are most likely, especially when the proof can be presented coherently without depending on too many unrelated results.
+
+### Cluster 1 - Group actions and Sylow theory
+
+Most important: Sylow Theorems 3.5, 3.8 and 3.9.
+
+Proof chain: Orbit-Stabiliser / class equation -> First Sylow; group actions on conjugates or cosets -> Second Sylow -> Third Sylow -> unique Sylow subgroup iff normal.
+
+- [ ] Know the statement and proof of the Orbit-Stabiliser Theorem.
+- [ ] Know the class equation and how it is used in the proof of the First Sylow Theorem.
+- [ ] Be able to present the proofs of the First, Second and Third Sylow Theorems.
+- [ ] Know Burnside's Lemma as a second major, fairly self-contained group-action result.
+- [ ] Be able to use Sylow counting immediately to prove normality/non-simplicity results.
+
+Estimated oral priority: very high. The later classification-style applications to groups of orders (p^2) and (pq) are explicitly non-examinable for the oral exam.
+
+### Cluster 2 - Simple and completely reducible modules
+
+Most important: Schur's Lemma, Theorem 5.6.
+
+Proof chain: simple module -> kernel and image of a homomorphism are submodules -> every non-zero endomorphism is invertible -> Schur; sums of simple modules -> complements -> Theorem 5.9.
+
+- [ ] Know the characterisation of simple modules in Theorem 5.5.
+- [ ] Know the proof of Schur's Lemma 5.6 cold.
+- [ ] Know the proof and meaning of Theorem 5.9 and its completely reducible consequence.
+- [ ] Understand how Schur's Lemma and Theorem 5.9 later enter Wedderburn-Artin.
+
+Estimated oral priority: high. Schur's Lemma is especially suitable as an oral question because it is important, short and conceptually self-contained.
+
+### Cluster 3 - Noetherian/Artinian modules and Hilbert basis theorem
+
+Most important: Hilbert's Basis Theorem, Theorem 6.23.
+
+Proof chain: ACC -> every submodule finitely generated -> maximal-element criterion (6.5) -> behaviour under submodules/quotients and extensions (6.9-6.10) -> Noetherian rings -> leading-coefficient argument -> Hilbert basis theorem.
+
+- [ ] Know the three equivalent characterisations in Theorem 6.5 and be able to prove them.
+- [ ] Know Theorem 6.10 and the mechanism by which Noetherian/Artinian passes between (N), (M), and (M/N).
+- [ ] Know the ring version, Theorem 6.13, at least well enough to move freely between ACC, finite generation and maximal-element arguments.
+- [ ] Know the proof of Hilbert's Basis Theorem 6.23 cold, especially the minimal-degree/leading-coefficient contradiction.
+- [ ] Know the corresponding Artinian definitions and dual statements even where the proof is omitted or follows by a dual argument.
+
+Estimated oral priority: very high. Theorems 6.5 and 6.23 are both strong standalone oral questions and are also useful throughout the written exam.
+
+### Cluster 4 - Artinian rings and Wedderburn-Artin
+
+Most important: Wedderburn-Artin, Theorem 7.10.
+
+Proof chain: minimal left ideals -> Lemma 7.9 gives idempotents -> decompose (R) into minimal left ideals -> group isomorphic simple summands -> Schur's Lemma + Hom of direct sums -> matrix rings over division rings -> (operatorname{End}_R(R) cong R^{op}).
+
+- [ ] Know Lemma 7.9 and its proof.
+- [ ] Know the exact statement of Wedderburn-Artin 7.10.
+- [ ] Be able to explain the two main claims in the proof and how they lead to a finite direct sum of minimal left ideals.
+- [ ] Know exactly where Theorem 5.9, Schur's Lemma 5.6, Theorem 4.30 and (operatorname{End}_R(R) cong R^{op}) are used.
+- [ ] Practise presenting the proof as an argument with structure, rather than trying to reproduce every line.
+
+Estimated oral priority: high. The notes explicitly mark the technical subclaim (R(1-e)cap A=0) inside Claim 1 as non-examinable; the remainder of the chapter after the Wedderburn-Artin proof is also marked non-examinable.
+
+### Cluster 5 - Free modules, Smith normal form and finitely generated modules over a PID
+
+Most important: Decomposition Theorem 9.1.
+
+Proof chain: finitely generated (M) -> (M cong R^n/K) (5.24) -> (K) is free over a PID (5.25) -> represent (Khookrightarrow R^n) by a matrix -> Smith normal form 8.8 -> diagonal quotient -> Decomposition Theorem 9.1 -> free part plus torsion 9.7 -> uniqueness 9.9 -> finitely generated abelian groups 9.10.
+
+- [ ] Know Lemma 5.24: every finitely generated module is a quotient of a finite free module.
+- [ ] Know Lemma 5.25: a submodule of a finite free module over a PID is free, and understand its inductive proof.
+- [ ] Know the statement and proof strategy of Smith Normal Form 8.8, including the key divisibility step.
+- [ ] Know the proof of the Decomposition Theorem 9.1 cold and be able to reconstruct it from the chain (M cong R^n/K 	o Kcong R^m 	o A 	o operatorname{SNF}(A)).
+- [ ] Know the short proof of (M=Foplusoperatorname{Tor}(M)) in Theorem 9.7.
+- [ ] Know the examinable part of the uniqueness proof 9.9 and the statement/consequence 9.10.
+- [ ] Know Theorem 5.21 (rank of a finite free module is well-defined) as a plausible standalone result from the free-module part.
+
+Estimated oral priority: very high, with 9.1 as one of the best results in the entire course to know deeply. Smith Normal Form is indispensable for the chain and the written exam; for oral rehearsal, prioritise understanding its proof mechanism and then being able to present 9.1 cleanly. The remainder of the proof of 9.9 is explicitly non-examinable.
+
+### Cluster 6 - (F[x])-modules and rational canonical form
+
+Most important: Rational Canonical Form, Theorem 10.8.
+
+Proof chain: make (V) an (F[x])-module via (xv=T(v)) -> finite dimensionality makes (V) a torsion (F[x])-module -> apply 9.1 -> decompose into cyclic (F[x])-modules -> characterise (T)-cyclic spaces with 10.4 -> obtain companion matrices with 10.6 -> Rational Canonical Form 10.8.
+
+- [ ] Understand why finite-dimensional (V) is finitely generated and torsion as an (F[x])-module.
+- [ ] Know Theorem 10.4 and its proof: a (T)-cyclic space has a basis (w,Tw,ldots,T^{k-1}w).
+- [ ] Know Theorem 10.6 and why the matrix in that basis is the companion matrix.
+- [ ] Know the proof of Rational Canonical Form 10.8 cold as an application of 9.1 and 10.6.
+- [ ] Know the statement and role of Theorem 10.1, but do not spend oral-proof time on it because its proof is explicitly non-examinable.
+
+Estimated oral priority: high. The proof of 10.8 is short and conceptually strong once the PID structure theorem is understood, making it a good candidate for an oral question.
+
+### Extra-time priority
+
+If time is limited, spend extra proof-rehearsal time in roughly this order:
+
+1. Decomposition Theorem 9.1 and its (5.24 	o 5.25 	o 8.8 	o 9.1) chain.
+2. Sylow Theorems, together with Orbit-Stabiliser and the class equation.
+3. Theorem 6.5 and Hilbert's Basis Theorem 6.23.
+4. Wedderburn-Artin 7.10, focusing on the architecture of the examinable proof.
+5. Schur's Lemma 5.6 and Theorem 5.9.
+6. Rational Canonical Form 10.8 together with 10.4 and 10.6.
+7. Smith Normal Form 8.8 in full proof detail after the above are secure.
+
+Tensor products are intentionally omitted from this oral-priority subset: the tensor-product chapter is explicitly marked non-examinable for the oral exam. They still matter for the written examination.
+
