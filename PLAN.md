@@ -102,8 +102,10 @@ The weekly sections below reproduce the official course programme. References to
 - [ ] Exercise 14.4
 - [ ] Theorem 21 (4.30)
 - [ ] Theorem 32 (5.21)
+- [ ] Lemma 3 (5.25)
 - [ ] Theorem 36 (6.10)
 - [ ] Theorem 40 (6.23)
+- [ ] Theorem 44 (7.10) (Wedderburn-Artin)
 - [ ] Theorem 49 (8.8)
 - [ ] Theorem 51 (9.1)
 - [ ] Theorem 55 (9.9)
