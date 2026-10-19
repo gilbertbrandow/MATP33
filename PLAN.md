@@ -140,7 +140,7 @@ Proof chain: simple module -> kernel and image of a homomorphism are submodules 
 
 - [ ] Know the characterisation of simple modules in Theorem 5.5.
 - [ ] Know the proof of Schur's Lemma 5.6 cold.
-- [ ] Know the proof and meaning of Theorem 5.9 and its completely reducible consequence.
+- [ ] Know the proof and meaning of Theorem 5.9
 - [ ] Understand how Schur's Lemma and Theorem 5.9 later enter Wedderburn-Artin.
 
 Estimated oral priority: high. Schur's Lemma is especially suitable as an oral question because it is important, short and conceptually self-contained.
@@ -182,7 +182,7 @@ Proof chain: finitely generated (M) -> (M cong R^n/K) (5.24) -> (K) is free over
 - [ ] Know Lemma 5.24: every finitely generated module is a quotient of a finite free module.
 - [ ] Know Lemma 5.25: a submodule of a finite free module over a PID is free, and understand its inductive proof.
 - [ ] Know the statement and proof strategy of Smith Normal Form 8.8, including the key divisibility step.
-- [ ] Know the proof of the Decomposition Theorem 9.1 cold and be able to reconstruct it from the chain (M cong R^n/K 	o Kcong R^m 	o A 	o operatorname{SNF}(A)).
+- [ ] Know the proof of the Decomposition Theorem 9.1 cold and be able to reconstruct it from the chain (M cong R^n/K  o Kcong R^m  o A  o operatorname{SNF}(A)).
 - [ ] Know the short proof of (M=Foplusoperatorname{Tor}(M)) in Theorem 9.7.
 - [ ] Know the examinable part of the uniqueness proof 9.9 and the statement/consequence 9.10.
 - [ ] Know Theorem 5.21 (rank of a finite free module is well-defined) as a plausible standalone result from the free-module part.
@@ -207,7 +207,7 @@ Estimated oral priority: high. The proof of 10.8 is short and conceptually stron
 
 If time is limited, spend extra proof-rehearsal time in roughly this order:
 
-1. Decomposition Theorem 9.1 and its (5.24 	o 5.25 	o 8.8 	o 9.1) chain.
+1. Decomposition Theorem 9.1 and its (5.24  o 5.25  o 8.8  o 9.1) chain.
 2. Sylow Theorems, together with Orbit-Stabiliser and the class equation.
 3. Theorem 6.5 and Hilbert's Basis Theorem 6.23.
 4. Wedderburn-Artin 7.10, focusing on the architecture of the examinable proof.
@@ -216,4 +216,3 @@ If time is limited, spend extra proof-rehearsal time in roughly this order:
 7. Smith Normal Form 8.8 in full proof detail after the above are secure.
 
 Tensor products are intentionally omitted from this oral-priority subset: the tensor-product chapter is explicitly marked non-examinable for the oral exam. They still matter for the written examination.
-
