@@ -1331,23 +1331,65 @@ where $s, r \in \mathbb{N} \cup \{0\}$, the $a_i$ are non-zero non-units in $R$,
 \end{theorem}
 
 \begin{proof}
-Since $M$ is finitely generated, by Lemma 5.24 there is a surjective $R$-homomorphism $\phi_0 : R^n \to M$, so $M \cong R^n/K$ where $K = \ker \phi_0$. Since $K$ is a submodule of the free module $R^n$, by Lemma 5.25 $K$ is free of rank $m \leq n$. Let $\phi : R^m \xrightarrow{\sim} K$ be an isomorphism and $\{e_1, \ldots, e_m\}$ the standard basis of $R^m$. Writing $\phi(e_j) = (a_{1j}, \ldots, a_{nj})^\top \in R^n$, the map $\phi$ is left-multiplication by the matrix $A = (a_{ij}) \in M_{n \times m}(R)$, so $K = AR^m$.
+Since $M$ is finitely generated, Lemma 5.24 gives a surjective $R$-homomorphism $\phi_0 : R^n \to M$. Let $K = \ker \phi_0$. By the First Isomorphism Theorem,
+\[
+  M \cong R^n/K.
+\]
 
-By Theorem 8.8 (Smith Normal Form), there exist invertible $P \in M_n(R)$ and $Q \in M_m(R)$ such that $PAQ = \mathrm{diag}(a_1, \ldots, a_k, 0, \ldots, 0)$ with $a_1 \mid \cdots \mid a_k$. Since $Q$ is invertible, $\{Qv \mid v \in R^m\} = R^m$, so $AR^m = AQR^m$. Left-multiplication by the invertible $P$ is an automorphism of $R^n$ sending $K = AQR^m$ to $P(AQR^m) = PAQR^m$, so $R^n/K \cong R^n/PAQR^m$. Therefore
+Because $K$ is a submodule of the finite free module $R^n$ and $R$ is a PID, Lemma 5.25 says that $K$ is free of finite rank $m \leq n$. Choose an isomorphism $\phi : R^m \xrightarrow{\sim} K$. The composite
 \[
-  M \cong \frac{R^n}{PAQR^m} \cong \frac{R}{Ra_1} \oplus \cdots \oplus \frac{R}{Ra_k} \oplus R^{n-k},
+  R^m \xrightarrow{\phi} K \hookrightarrow R^n
 \]
-where the last isomorphism is justified as follows. Left-multiplying $v = (v_1, \ldots, v_m)^\top \in R^m$ by $D = \mathrm{diag}(a_1,\ldots,a_k,0,\ldots,0) \in M_{n \times m}(R)$ gives $(a_1 v_1, \ldots, a_k v_k, 0, \ldots, 0)^\top \in R^n$, and as $v$ ranges over $R^m$ each $a_i v_i$ ranges independently over $Ra_i$. Hence
+is represented by an $n \times m$ matrix $A$: its $j$th column is the vector $\phi(e_j) \in K \subseteq R^n$, where $e_j$ is the $j$th standard basis vector of $R^m$. Since $\phi$ maps onto $K$, the image of this matrix is exactly
 \[
-  PAQR^m = DR^m = Ra_1 \oplus \cdots \oplus Ra_k \oplus \underbrace{0 \oplus \cdots \oplus 0}_{n-k}.
+  AR^m = K.
 \]
-Now apply Theorem 4.33 with $n$ factors, taking $M_i = R$ for every $i$, $A_i = Ra_i$ for $i \leq k$, and $A_i = 0$ for $i > k$:
+
+By Smith Normal Form (Theorem 8.8), there are invertible matrices $P \in M_n(R)$ and $Q \in M_m(R)$ such that
 \[
-  \frac{R^n}{PAQR^m} = \frac{R \oplus \cdots \oplus R}{Ra_1 \oplus \cdots \oplus Ra_k \oplus 0 \oplus \cdots \oplus 0} \cong \frac{R}{Ra_1} \oplus \cdots \oplus \frac{R}{Ra_k} \oplus \underbrace{\frac{R}{0} \oplus \cdots \oplus \frac{R}{0}}_{n-k},
+  PAQ = D = \operatorname{diag}(d_1, \ldots, d_k, 0, \ldots, 0),
+  \qquad d_1 \mid \cdots \mid d_k,
 \]
-and $R/0 \cong R$, so the last $n-k$ summands give $R^{n-k}$. Deleting the zero summands (those where $a_i$ is a unit, giving $R/Ra_i = 0$), renaming the remaining non-unit diagonal entries $a_1, \ldots, a_r$, and setting $s = n - k$ gives
+where $d_1,\ldots,d_k$ are the nonzero diagonal entries. Since $Q$ is invertible, $QR^m=R^m$: every vector in $R^m$ is $Qv$ for some $v \in R^m$. Therefore
 \[
-  M \cong \frac{R}{Ra_1} \oplus \cdots \oplus \frac{R}{Ra_r} \oplus R^s. \qedhere
+  AQR^m = AR^m = K.
+\]
+Multiplying this equality of submodules by $P$ gives
+\[
+  DR^m = PAQR^m = PK.
+\]
+
+We now explicitly compare the quotients. Define
+\[
+  \overline{P}:R^n/K \longrightarrow R^n/PK,
+  \qquad v+K \longmapsto Pv+PK.
+\]
+This is well-defined: if $v+K=w+K$, then $v-w \in K$, so $P(v-w) \in PK$, and hence $Pv+PK=Pw+PK$. It is an isomorphism, with inverse $u+PK \mapsto P^{-1}u+K$. Thus, using $K=AR^m$ and $PK=PAQR^m=DR^m$,
+\[
+  M \cong R^n/K \cong R^n/PK
+    = R^n/PAQR^m
+    = R^n/DR^m.
+\]
+
+To compute $DR^m$, write $v=(v_1,\ldots,v_m)^{\mathsf T}$. Then
+\[
+  Dv=(d_1v_1,\ldots,d_kv_k,0,\ldots,0)^{\mathsf T}.
+\]
+The inputs $v_1,\ldots,v_k$ vary independently over $R$, so the first $k$ output coordinates vary independently over the ideals $Rd_1,\ldots,Rd_k$. Hence, as a submodule of $R^n=R\oplus\cdots\oplus R$,
+\[
+  DR^m = Rd_1 \oplus \cdots \oplus Rd_k
+    \oplus \underbrace{0 \oplus \cdots \oplus 0}_{n-k}.
+\]
+Applying Theorem 4.33 coordinate by coordinate gives
+\[
+  \frac{R^n}{DR^m}
+  \cong
+  \frac{R}{Rd_1} \oplus \cdots \oplus \frac{R}{Rd_k}
+  \oplus \underbrace{\frac{R}{0} \oplus \cdots \oplus \frac{R}{0}}_{n-k}.
+\]
+Since $R/0 \cong R$, the last $n-k$ terms give $R^{n-k}$. If some $d_i$ is a unit, then $Rd_i=R$ and $R/Rd_i=0$, so that summand vanishes. The unit entries occur first in the divisibility chain; after deleting them and renaming the remaining nonzero non-unit entries $a_1,\ldots,a_r$, we retain $a_1 \mid \cdots \mid a_r$. Setting $s=n-k$, we obtain
+\[
+  M \cong R^s \oplus R/Ra_1 \oplus \cdots \oplus R/Ra_r. \qedhere
 \]
 \end{proof}
 
