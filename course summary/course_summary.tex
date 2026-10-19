@@ -680,6 +680,17 @@ Let $0 \neq f \in \mathrm{Hom}_R(M,M)$. We show $f$ is invertible and $f^{-1} \i
 where we used that $f$ is itself an $R$-homomorphism in the last step of each line. Injectivity of $f$ gives $f^{-1}(x+y) = f^{-1}(x) + f^{-1}(y)$ and $f^{-1}(rx) = rf^{-1}(x)$.
 \end{proof}
 
+\begin{corollary}[Non-isomorphic simple modules]
+Let $M$ and $N$ be simple $R$-modules. If $M \not\cong N$, then
+\[
+  \mathrm{Hom}_R(M,N)=0.
+\]
+\end{corollary}
+
+\begin{proof}
+Let $f : M \to N$ be a nonzero $R$-homomorphism. Since $\ker f$ is a submodule of the simple module $M$ and $f \neq 0$, we have $\ker f=0$. Since $\mathrm{im}\,f$ is a nonzero submodule of the simple module $N$, we have $\mathrm{im}\,f=N$. Thus $f$ is an isomorphism, contradicting $M \not\cong N$. Therefore every homomorphism $M \to N$ is zero, so $\mathrm{Hom}_R(M,N)=0$.
+\end{proof}
+
 \begin{definition}[5.7 — Completely reducible module]
 Let $R$ be a ring with unity. An $R$-module $M$ is called \emph{completely reducible} (or \emph{semisimple}) if $M = \sum_{\alpha \in \Lambda} M_\alpha$, where each $M_\alpha$ is a simple $R$-submodule.
 \end{definition}
