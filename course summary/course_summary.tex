@@ -292,11 +292,17 @@ Let $G$ be a finite group and $p$ a prime. The number $n_p$ of Sylow $p$-subgrou
 \[
   x \cdot Q := xQx^{-1}, \quad x \in P,\ Q \in \mathrm{Syl}_p(G).
 \]
-This action partitions $\mathrm{Syl}_p(G)$ into orbits. Let $F \subseteq \mathrm{Syl}_p(G)$ denote the set of fixed points (those $Q$ with $xQx^{-1} = Q$ for all $x \in P$), and let $\mathcal{O}$ denote the collection of orbits of size greater than 1. Then:
+The orbit of $Q$ is $P \cdot Q = \{xQx^{-1} : x \in P\}$, and its stabiliser is $\{x \in P : xQx^{-1} = Q\} = P \cap N_G(Q) = N_P(Q)$. By the Orbit-Stabiliser Theorem,
 \[
-  n_p = |\mathrm{Syl}_p(G)| = |F| + \sum_{O \in \mathcal{O}} |O|.
+  |P \cdot Q| = |P : N_P(Q)|,
 \]
-By the Orbit-Stabiliser Theorem each $|O|$ divides $|P| = p^m$, so every $O \in \mathcal{O}$ has size $p^e$ for some $e \geq 1$, hence $p \mid |O|$. Therefore $n_p \equiv |F| \pmod{p}$.
+which divides $|P| = p^m$ and is therefore a power of $p$. In particular $|P \cdot Q| = 1$ if and only if $N_P(Q) = P$.
+
+Let $F = \{Q \in \mathrm{Syl}_p(G) : N_P(Q) = P\}$ be the set of fixed points, and choose representatives $Q_1, \dots, Q_r$, one from each orbit of size greater than 1. The orbits partition $\mathrm{Syl}_p(G)$, so
+\[
+  n_p = |\mathrm{Syl}_p(G)| = |F| + \sum_{i=1}^{r} |P : N_P(Q_i)|.
+\]
+Each $|P : N_P(Q_i)|$ is a power $p^{e_i}$ with $e_i \geq 1$, hence divisible by $p$. Therefore $n_p \equiv |F| \pmod{p}$.
 
 It remains to show $F = \{P\}$, which gives $n_p \equiv 1 \pmod{p}$. Clearly $P \in F$. If $Q \in F$, then $xQx^{-1} = Q$ for all $x \in P$, so $P \leq N_G(Q)$. By Corollary 3.10, since $Q \trianglelefteq N_G(Q)$, $Q$ is the unique Sylow $p$-subgroup of $N_G(Q)$. But $P$ is also a Sylow $p$-subgroup of $N_G(Q)$, so $P = Q$. Hence $F = \{P\}$.
 \end{proof}
