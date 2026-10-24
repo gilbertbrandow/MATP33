@@ -492,6 +492,49 @@ An $R$-homomorphism $M\to M$ is called an \emph{endomorphism}, and
 
 \end{definition}
 
+\begin{lemma}[Properties of homomorphisms]\label{lem:hom-basic}
+Let $f \colon M \to N$ be an $R$-homomorphism. Then for all $a, b \in M$ and $r \in R$:
+\begin{enumerate}[label=(\roman*)]
+  \item $f(0_M) = 0_N$;
+  \item $f(a - b) = f(a) - f(b)$;
+  \item $r \cdot 0_N = 0_N$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) By additivity, $f(0_M) = f(0_M + 0_M) = f(0_M) + f(0_M)$. Adding $-f(0_M)$ to both sides gives $0_N = f(0_M)$.
+
+(ii) By additivity, $f(a - b) + f(b) = f\bigl((a - b) + b\bigr) = f(a)$. Adding $-f(b)$ to both sides gives $f(a - b) = f(a) - f(b)$.
+
+(iii) By the module axiom $r(x + y) = rx + ry$, we have $r \cdot 0_N = r(0_N + 0_N) = r \cdot 0_N + r \cdot 0_N$. Adding $-(r \cdot 0_N)$ to both sides gives $0_N = r \cdot 0_N$.
+\end{proof}
+
+\begin{lemma}[Kernel and image are submodules]\label{lem:ker-im}
+Let $f \colon M \to N$ be an $R$-homomorphism. Then
+\[
+  \ker f = \{x \in M \mid f(x) = 0_N\} \quad \text{and} \quad \mathrm{im}\, f = f(M) = \{f(x) \mid x \in M\}
+\]
+are $R$-submodules of $M$ and $N$ respectively.
+\end{lemma}
+
+\begin{proof}
+We check the three conditions of Definition 4.8, using parts (i)--(iii) of Lemma~\ref{lem:hom-basic}.
+
+\textit{$\ker f \leq M$.}
+\begin{enumerate}[label=(\roman*)]
+  \item By (i), $f(0_M) = 0_N$, so $0_M \in \ker f$ and $\ker f \neq \emptyset$.
+  \item Let $a, b \in \ker f$. By (ii), $f(a - b) = f(a) - f(b) = 0_N - 0_N = 0_N$, so $a - b \in \ker f$.
+  \item Let $a \in \ker f$ and $r \in R$. Since $f$ is an $R$-homomorphism and by (iii), $f(ra) = rf(a) = r \cdot 0_N = 0_N$, so $ra \in \ker f$.
+\end{enumerate}
+
+\textit{$\mathrm{im}\, f \leq N$.}
+\begin{enumerate}[label=(\roman*)]
+  \item By (i), $0_N = f(0_M) \in \mathrm{im}\, f$, so $\mathrm{im}\, f \neq \emptyset$.
+  \item Let $u, v \in \mathrm{im}\, f$, say $u = f(a)$ and $v = f(b)$ with $a, b \in M$. By (ii), $u - v = f(a) - f(b) = f(a - b)$, and $a - b \in M$, so $u - v \in \mathrm{im}\, f$.
+  \item Let $u = f(a) \in \mathrm{im}\, f$ and $r \in R$. Since $f$ is an $R$-homomorphism, $ru = rf(a) = f(ra)$, and $ra \in M$, so $ru \in \mathrm{im}\, f$. \qedhere
+\end{enumerate}
+\end{proof}
+
 \begin{theorem}[4.30]
 Let $M = \bigoplus_{i=1}^k M_i$ be a direct sum of $R$-modules. Then
 \[
@@ -676,7 +719,7 @@ Let $M$ be a simple $R$-module. Then $\mathrm{Hom}_R(M,M)$ is a division ring.
 \begin{proof}
 Let $0 \neq f \in \mathrm{Hom}_R(M,M)$. We show $f$ is invertible and $f^{-1} \in \mathrm{Hom}_R(M,M)$.
 
-\textit{$f$ is bijective.} Since $\ker f$ and $\mathrm{im}\, f$ are submodules of $M$, simplicity forces each to be $0$ or $M$. As $f \neq 0$, we have $\ker f \neq M$ and $\mathrm{im}\, f \neq 0$, so $\ker f = 0$ (injective) and $\mathrm{im}\, f = M$ (surjective).
+\textit{$f$ is bijective.} By Lemma~\ref{lem:ker-im}, $\ker f$ and $\mathrm{im}\, f$ are submodules of $M$, so simplicity forces each to be $0$ or $M$. As $f \neq 0$, we have $\ker f \neq M$ and $\mathrm{im}\, f \neq 0$, so $\ker f = 0$ (injective) and $\mathrm{im}\, f = M$ (surjective).
 
 \textit{$f^{-1}$ is an $R$-homomorphism.} We cannot push $f^{-1}$ through operations directly, but we can push $f$ through them. The strategy is: to prove $f^{-1}(u) = v$, it suffices to show $f(u) = f(v)$, since $f$ is injective. For $x, y \in M$ and $r \in R$:
 \begin{align*}
@@ -694,7 +737,7 @@ Let $M$ and $N$ be simple $R$-modules. If $M \not\cong N$, then
 \end{corollary}
 
 \begin{proof}
-Let $f : M \to N$ be a nonzero $R$-homomorphism. Since $\ker f$ is a submodule of the simple module $M$ and $f \neq 0$, we have $\ker f=0$. Since $\mathrm{im}\,f$ is a nonzero submodule of the simple module $N$, we have $\mathrm{im}\,f=N$. Thus $f$ is an isomorphism, contradicting $M \not\cong N$. Therefore every homomorphism $M \to N$ is zero, so $\mathrm{Hom}_R(M,N)=0$.
+Let $f : M \to N$ be a nonzero $R$-homomorphism. By Lemma~\ref{lem:ker-im}, $\ker f \leq M$ and $\mathrm{im}\,f \leq N$. Since $\ker f$ is a submodule of the simple module $M$ and $f \neq 0$, we have $\ker f=0$. Since $\mathrm{im}\,f$ is a nonzero submodule of the simple module $N$, we have $\mathrm{im}\,f=N$. Thus $f$ is an isomorphism, contradicting $M \not\cong N$. Therefore every homomorphism $M \to N$ is zero, so $\mathrm{Hom}_R(M,N)=0$.
 \end{proof}
 
 \begin{definition}[5.7 — Completely reducible module]
